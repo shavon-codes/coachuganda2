@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy &amp; Child Protection | Coach Uganda</title>
+<meta name="description" content="Coach Uganda Privacy Policy and Child Protection Policy — how we handle your information and safeguard children and families.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ================= THEME ================= */
+:root{
+  --bg:#080b10; --line:rgba(255,255,255,.09);
+  --text:#eaf1fa; --soft:#c6d2e2; --muted:#97a6ba;
+  --accent:#f7c948; --accent2:#ff8a3d;
+  --glow1:rgba(247,201,72,.16); --glow2:rgba(255,138,61,.13); --glow3:rgba(247,201,72,.09);
+  --accent-glow:rgba(247,201,72,.75);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:155px}
+body{
+  font-family:'Poppins',system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.78;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  transition:background .4s;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(700px 420px at 12% -8%,var(--glow1),transparent 60%),
+    radial-gradient(620px 420px at 92% 4%,var(--glow2),transparent 62%),
+    radial-gradient(820px 520px at 50% 108%,var(--glow3),transparent 66%),
+    linear-gradient(180deg,#080b10,#0a0f17 55%,#080b10);
+  transition:background .4s;
+}
+img{max-width:100%;display:block}
+a{color:var(--accent2)}
+
+/* ================= SCROLL PROGRESS ================= */
+.progress{
+  position:fixed;top:0;left:0;height:3px;width:0;z-index:100;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  box-shadow:0 0 14px var(--accent-glow);transition:width .1s linear;
+}
+
+/* ================= TOP BAR ================= */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(8,11,16,.8);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-in{
+  max-width:1180px;margin:0 auto;padding:13px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-weight:700}
+.brand img{width:42px;height:42px;border-radius:13px;object-fit:cover;border:1px solid var(--line)}
+.brand b{display:block;font-size:15px;line-height:1.2}
+.brand small{display:block;font-size:10.5px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+
+.btn-home{
+  display:inline-flex;align-items:center;gap:9px;padding:11px 20px;border-radius:999px;
+  font-weight:600;font-size:14px;text-decoration:none;color:#0a0d12;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 10px 26px -10px var(--accent-glow);
+  transition:.25s;white-space:nowrap;border:none;cursor:pointer;
+}
+.btn-home:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px var(--accent-glow)}
+
+/* ================= HERO ================= */
+.hero{padding:70px 22px 46px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero-in{max-width:1000px;margin:0 auto;position:relative;z-index:2}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);padding:7px 16px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.045);
+}
+h1{font-size:clamp(2rem,5.6vw,3.4rem);line-height:1.1;font-weight:800;letter-spacing:-.025em;margin:20px 0 16px}
+.grad{
+  background:linear-gradient(115deg,#fff 8%,var(--accent) 52%,var(--accent2) 92%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.lead{color:var(--muted);max-width:72ch;font-size:1.02rem}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.pill{
+  display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--muted);
+  background:rgba(255,255,255,.045);border:1px solid var(--line);
+  padding:9px 16px;border-radius:999px;
+}
+.pill i{color:var(--accent);font-size:12px}
+
+/* ================= TAB BAR ================= */
+.tabbar{
+  position:sticky;top:68px;z-index:55;
+  background:rgba(8,11,16,.85);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.tabbar-in{
+  max-width:1180px;margin:0 auto;padding:12px 22px;
+  display:flex;gap:10px;flex-wrap:wrap;
+}
+.tab{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:11px 20px;border-radius:999px;font-family:inherit;
+  font-size:13.5px;font-weight:600;color:var(--muted);
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  cursor:pointer;transition:.25s;white-space:nowrap;
+}
+.tab i{font-size:12.5px}
+.tab:hover{color:#fff;background:rgba(255,255,255,.075)}
+.tab.active{
+  color:#0a0d12;border-color:transparent;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 10px 26px -10px var(--accent-glow);
+}
+
+/* ================= PANELS ================= */
+.panel{display:none}
+.panel.active{display:block;animation:fadeIn .45s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.layout{
+  max-width:1180px;margin:0 auto;padding:48px 22px 90px;
+  display:grid;grid-template-columns:280px minmax(0,1fr);
+  gap:44px;align-items:start;
+}
+
+/* ================= TOC ================= */
+.toc-card{
+  position:sticky;top:155px;border-radius:20px;padding:22px;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));
+  border:1px solid var(--line);backdrop-filter:blur(12px);
+}
+.toc-card h4{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px;
+}
+.toc{display:flex;flex-direction:column;gap:2px;max-height:60vh;overflow-y:auto;scrollbar-width:thin}
+.toc::-webkit-scrollbar{width:5px}
+.toc::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:9px}
+.toc a{
+  font-size:13px;color:var(--muted);text-decoration:none;
+  padding:8px 12px;border-radius:10px;line-height:1.45;
+  border-left:2px solid transparent;transition:.2s;
+}
+.toc a:hover{color:#fff;background:rgba(255,255,255,.05)}
+.toc a.active{color:#fff;background:rgba(255,255,255,.075);border-left-color:var(--accent)}
+
+/* ================= DOCUMENT ================= */
+.doc{counter-reset:sec;min-width:0}
+.doc-head{
+  margin-bottom:26px;padding:20px 24px;border-radius:18px;
+  border:1px dashed rgba(255,255,255,.16);
+  background:rgba(255,255,255,.025);
+}
+.doc-badge{
+  display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+  padding:6px 14px;border-radius:999px;margin-bottom:12px;
+  border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);
+}
+.doc-head p{margin:0;font-size:.9rem;color:var(--muted)}
+.doc-head strong{color:var(--soft);font-weight:600}
+
+.doc section{
+  margin-bottom:24px;padding:26px 28px 12px;border-radius:20px;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(255,255,255,.042),rgba(255,255,255,.014));
+  transition:border-color .3s;
+}
+.doc section:hover{border-color:rgba(255,255,255,.2)}
+.doc h2{
+  counter-increment:sec;font-size:1.22rem;font-weight:700;
+  display:flex;gap:14px;align-items:baseline;margin-bottom:14px;line-height:1.4;
+}
+.doc h2::before{
+  content:counter(sec,decimal-leading-zero);flex:none;
+  font-size:.8rem;font-weight:800;color:#0a0d12;
+  padding:4px 10px;border-radius:9px;transform:translateY(-2px);
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+/* Child Protection panel — hide auto numbers, keep the numbered titles visible */
+#panel-child .doc h2{counter-increment:none;display:block}
+#panel-child .doc h2::before{display:none}
+
+.doc h3{font-size:1rem;margin:22px 0 8px;color:var(--accent);font-weight:600}
+.doc p{color:var(--soft);margin-bottom:14px;font-size:.96rem}
+.doc ul{margin:0 0 16px;padding:0;list-style:none}
+.doc ul li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--soft);font-size:.96rem}
+.doc ul li::before{
+  content:"";position:absolute;left:6px;top:.66em;width:7px;height:7px;border-radius:2px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));transform:rotate(45deg);
+}
+.doc ol{margin:0 0 16px;padding-left:24px;color:var(--soft);font-size:.96rem}
+.doc ol li{margin-bottom:9px;padding-left:4px}
+.doc ol li::marker{color:var(--accent);font-weight:700}
+.doc strong{color:#fff;font-weight:600}
+.doc a{color:var(--accent2);text-decoration:none;border-bottom:1px dotted currentColor;word-break:break-word}
+.doc a:hover{color:#fff}
+
+/* ================= CALLOUTS ================= */
+.note{
+  margin:8px 0 26px;padding:22px 24px;border-radius:20px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+}
+.note p{margin:0;color:var(--soft);font-size:.94rem}
+
+.alert{
+  margin:0 0 18px;padding:20px 22px;border-radius:16px;
+  background:linear-gradient(135deg,var(--glow1),var(--glow3));
+  border:1px solid rgba(255,255,255,.18);
+  color:var(--soft);font-size:.94rem;
+}
+.alert i{margin-right:10px;color:var(--accent)}
+.alert strong{color:#fff}
+
+.contact-box{
+  margin:6px 0 18px;padding:22px 24px;border-radius:16px;
+  border:1px solid var(--line);background:rgba(255,255,255,.035);
+}
+.contact-box p{margin:0 0 8px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.contact-box p:last-child{margin:0}
+.contact-box i{color:var(--accent);width:16px;flex:none;margin-top:.35em}
+
+/* separator line for child policy end */
+.sep{margin:24px 0;border-top:1px solid rgba(255,255,255,.14)}
+
+/* ================= END CTA ================= */
+.end-cta{
+  margin-top:16px;text-align:center;padding:44px 26px;border-radius:26px;
+  border:1px solid var(--line);
+  background:radial-gradient(circle at 50% 0%,var(--glow1),transparent 62%),rgba(255,255,255,.028);
+}
+.end-cta h3{font-size:1.35rem;font-weight:700;margin-bottom:10px}
+.end-cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px;font-size:.95rem}
+.end-cta .btn-home{font-size:15px;padding:13px 26px}
+
+/* ================= FOOTER ================= */
+.site-footer{border-top:1px solid var(--line);background:rgba(0,0,0,.28);padding:34px 22px}
+.footer-in{
+  max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;
+  align-items:center;justify-content:space-between;font-size:13.5px;color:var(--muted);
+}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px}
+.footer-links a{color:var(--muted);text-decoration:none;transition:.2s;cursor:pointer}
+.footer-links a:hover{color:var(--accent)}
+
+/* ================= BACK TO TOP ================= */
+.to-top{
+  position:fixed;right:20px;bottom:22px;width:48px;height:48px;border-radius:50%;
+  border:none;display:grid;place-items:center;cursor:pointer;color:#0a0d12;z-index:70;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 14px 30px -10px var(--accent-glow);
+  opacity:0;pointer-events:none;transform:translateY(14px);transition:.3s;
+}
+.to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+/* ================= REVEAL ================= */
+.reveal{opacity:0;transform:translateY(18px);transition:.6s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:980px){
+  .layout{grid-template-columns:1fr;gap:26px;padding-top:32px}
+  .toc-card{position:static;order:-1}
+  .toc{max-height:none}
+}
+@media(max-width:640px){
+  .hero{padding:48px 18px 36px}
+  .doc section{padding:20px 18px 6px}
+  .brand small{display:none}
+  .brand img{width:36px;height:36px}
+  .btn-home{padding:10px 16px;font-size:13px}
+  .btn-home .lbl{display:none}
+  .btn-home::after{content:"Home";font-weight:600}
+  .tabbar{top:62px}
+  .tab{padding:10px 15px;font-size:12.5px}
+  html{scroll-padding-top:140px}
+  .toc-card{top:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="tab-privacy">
+
+<div class="progress" id="progress"></div>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+  <div class="topbar-in">
+    <a href="index.html" class="brand">
+      <span class="logo-badge">
+        <span class="logo-c">C</span><span class="logo-dot">·</span><span class="logo-u">U</span>
+      </span>
+      <div><b>Coach Uganda</b><small>Legal &amp; Trust</small></div>
+    </a>
+    <a href="index.html" class="btn-home"><i class="fa-solid fa-house"></i><span class="lbl">Back to Home</span></a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-in">
+    <span class="eyebrow"><i class="fa-solid fa-scale-balanced"></i> Trust &amp; Transparency</span>
+    <h1>Privacy &amp; <span class="grad">Child Protection</span></h1>
+    <p class="lead">Everything about how Coach Uganda handles your information, and how we safeguard the dignity, safety and privacy of the children and families featured in our work — all in one place.</p>
+    <div class="pills">
+      <span class="pill"><i class="fa-solid fa-calendar-check"></i> Last Updated: 19 November 2026</span>
+      <span class="pill"><i class="fa-solid fa-globe"></i> coachuganda.com</span>
+      <span class="pill"><i class="fa-solid fa-circle-info"></i> Personal Initiative — Not an NGO</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TAB BAR ================= -->
+<div class="tabbar" id="tabbar">
+  <div class="tabbar-in" role="tablist" aria-label="Legal documents">
+    <button class="tab" data-tab="child" role="tab" aria-selected="false" aria-controls="panel-child">
+      <i class="fa-solid fa-child-reaching"></i> Child Protection
+    </button>
+    <button class="tab active" data-tab="privacy" role="tab" aria-selected="true" aria-controls="panel-privacy">
+      <i class="fa-solid fa-shield-halved"></i> Privacy Policy
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     PANEL 2 — CHILD PROTECTION AND PRIVACY POLICY
+     ============================================================ -->
+<div class="panel" id="panel-child" role="tabpanel" aria-labelledby="tab-child">
+
+  <div class="layout">
+
+    <aside class="toc-card">
+      <h4><i class="fa-solid fa-list-ul"></i> On This Page</h4>
+      <nav class="toc" aria-label="Child Protection contents"></nav>
+    </aside>
+
+    <article class="doc">
+
+      <div class="doc-head">
+        <span class="doc-badge"><i class="fa-solid fa-child-reaching"></i> Coach Uganda — Child Protection and Privacy Policy</span>
+        <p>Last Updated: <strong>20th November 2026</strong></p>
+      </div>
+
+      <section class="reveal">
+        <h2>1. Introduction</h2>
+        <p>Coach Uganda is an independently managed personal website dedicated to health education, community awareness, and sharing personal efforts to support children, families, and communities in Uganda.</p>
+        <p>The website features two main categories:</p>
+        <ul>
+          <li><strong>Coach Uganda Journal:</strong> Publishes educational articles about health, wellness, disease prevention, and healthy living.</li>
+          <li><strong>Coach Uganda Gives:</strong> Shares stories, experiences, and personal initiatives focused on supporting vulnerable children, families, and communities in Uganda.</li>
+        </ul>
+        <p>Coach Uganda is a personal initiative and is not a registered non-governmental organization (NGO) or charitable organization.</p>
+        <p>Protecting the privacy, dignity, safety, and well-being of children and families is an important responsibility of this initiative.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>2. Our Commitment to Child Protection</h2>
+        <p>Coach Uganda is committed to treating every child and family featured on this website with dignity, compassion, and respect.</p>
+        <p>The safety and well-being of children take priority over publicity, storytelling, website traffic, and advertising revenue.</p>
+        <p>Content published under Coach Uganda Gives is intended to raise awareness, encourage kindness, and share experiences without unnecessarily exposing vulnerable individuals to harm.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>3. Protection of Children’s Privacy and Identities</h2>
+        <p>Coach Uganda takes reasonable precautions to protect the identities of children and vulnerable families featured in its articles.</p>
+        <p>These measures include:</p>
+        <ul>
+          <li>Blurring or concealing children’s faces where appropriate.</li>
+          <li>Avoiding the publication of children’s full names.</li>
+          <li>Not revealing private home addresses, school locations, or other sensitive identifying information.</li>
+          <li>Avoiding unnecessary disclosure of personal, medical, or family circumstances.</li>
+          <li>Reviewing photographs and stories before publication to reduce privacy and safety risks.</li>
+          <li>Respecting requests for privacy and confidentiality.</li>
+        </ul>
+        <p>Blurring faces does not always guarantee anonymity, so other identifying details are also considered before publication.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>4. Consent for Photographs and Stories</h2>
+        <p>Coach Uganda seeks appropriate permission before publishing identifiable photographs or personal stories involving children and families.</p>
+        <p>Where children are involved, permission is sought from their parents or legal guardians, with consideration for the children’s wishes and best interests.</p>
+        <p>Even where consent has been provided, photographs may be blurred or identifying information withheld to provide additional privacy protection.</p>
+        <p>Consent must be voluntary and informed, and families should understand that published content may be accessible to the public.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>5. Respectful Storytelling</h2>
+        <p>Articles published under Coach Uganda Gives aim to promote understanding, compassion, and community support.</p>
+        <p>Coach Uganda strives to ensure that:</p>
+        <ul>
+          <li>Stories are presented truthfully and respectfully.</li>
+          <li>Children and families are not portrayed in degrading or exploitative ways.</li>
+          <li>Personal difficulties are not unnecessarily disclosed to attract attention.</li>
+          <li>Photographs are used responsibly.</li>
+          <li>The dignity of individuals remains a priority.</li>
+        </ul>
+      </section>
+
+      <section class="reveal">
+        <h2>6. Health Information and Privacy</h2>
+        <p>Articles published under Coach Uganda Journal are intended for general health education and awareness.</p>
+        <p>The website does not publish identifiable personal medical information about children or families without an appropriate legal basis and necessary permission.</p>
+        <p>Health articles are provided for informational purposes and are not intended to replace professional medical advice, diagnosis, or treatment.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>7. Advertising and Website Monetization</h2>
+        <p>Coach Uganda may generate revenue through Google AdSense or other advertising services.</p>
+        <p>Advertising revenue supports the independent operation of the website and does not automatically represent charitable donations or funds allocated to families.</p>
+        <p>Advertising and monetization activities do not override Coach Uganda’s commitment to protecting the dignity, safety, and privacy of individuals featured in its articles.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>8. Privacy Concerns and Removal Requests</h2>
+        <p>Parents, legal guardians, and individuals featured on Coach Uganda may contact the website operator to raise privacy concerns or request the correction, anonymization, or removal of photographs and personal information.</p>
+        <p>Requests will be reviewed promptly and handled in accordance with applicable laws and the interests of the individuals concerned.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>9. Contact Information</h2>
+        <p>For questions or concerns regarding child protection and privacy, please contact:</p>
+        <div class="contact-box">
+          <p><strong>Coach Uganda</strong></p>
+          <p><i class="fa-solid fa-globe"></i> Website: www.coachuganda.com</p>
+          <p><i class="fa-solid fa-envelope"></i> Email: info@coachuganda.com</p>
+          <p><i class="fa-solid fa-link"></i> Website Address: https://www.coachuganda.com</p>
+          <p><i class="fa-solid fa-location-dot"></i> Initiative Activities: Uganda</p>
+        </div>
+      </section>
+
+      <div class="sep"></div>
+
+      <div class="alert reveal">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <strong>Important Notice:</strong> Coach Uganda is an independently managed personal initiative. It is not a registered NGO, charity, or government organization.
+      </div>
+
+      <div class="note reveal"><p>©️ 2026 Coach Uganda. All Rights Reserved.</p></div>
+
+      <div class="end-cta reveal">
+        <h3>Every child deserves dignity 💛</h3>
+        <p>Thank you for taking the time to understand how we protect children and families.</p>
+        <a href="index.html" class="btn-home"><i class="fa-solid fa-house"></i> Back to Home</a>
+      </div>
+
+    </article>
+  </div>
+</div>
+
+<!-- ============================================================
+     PANEL 1 — PRIVACY POLICY
+     ============================================================ -->
+<div class="panel active" id="panel-privacy" role="tabpanel" aria-labelledby="tab-privacy">
+
+  <div class="layout">
+
+    <aside class="toc-card">
+      <h4><i class="fa-solid fa-list-ul"></i> On This Page</h4>
+      <nav class="toc" aria-label="Privacy Policy contents"></nav>
+    </aside>
+
+    <article class="doc">
+
+      <div class="doc-head">
+        <span class="doc-badge"><i class="fa-solid fa-file-shield"></i> Privacy Policy</span>
+        <p>Effective Date: <strong>19 November 2026</strong> &nbsp;·&nbsp; Last Updated: <strong>19 November 2026</strong></p>
+      </div>
+
+      <section class="reveal">
+        <h2>Introduction</h2>
+        <p>Welcome to Coach Uganda.</p>
+        <p>Coach Uganda is a personal brand, digital content platform, and community-focused initiative dedicated to sharing knowledge, experiences, inspiration, and opportunities through storytelling, educational articles, lifestyle content, and community support.</p>
+        <p>Our website includes Coach Uganda Journal, Coach Uganda Gives, and information about our services, partnerships, and other activities.</p>
+        <p>We respect your privacy and are committed to protecting the personal information you share with us.</p>
+        <p>This Privacy Policy explains how we collect, use, store, disclose, and protect information when you visit <a href="https://www.coachuganda.com/" target="_blank" rel="noopener">https://www.coachuganda.com/</a>, subscribe to our newsletter, contact us, support our initiatives, or interact with our content and services.</p>
+        <p>By using our website, you acknowledge this Privacy Policy. Where applicable law requires consent for particular data processing activities, we will request that consent separately.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Information We Collect</h2>
+        <p>We may collect personal information in the following circumstances.</p>
+
+        <h3>2.1 Information You Provide Voluntarily</h3>
+        <p>When you contact us, subscribe to our newsletter, inquire about our services, or participate in our initiatives, we may collect:</p>
+        <ul>
+          <li>Your name</li>
+          <li>Email address</li>
+          <li>Telephone number</li>
+          <li>Subject and content of your message</li>
+          <li>Information relating to partnership or service inquiries</li>
+          <li>Information you voluntarily provide when supporting Coach Uganda Gives</li>
+          <li>Other information you choose to share with us</li>
+        </ul>
+        <p>We request that visitors avoid submitting sensitive personal information unless it is necessary for a specific purpose and appropriate safeguards are in place.</p>
+
+        <h3>2.2 Information Collected Automatically</h3>
+        <p>When you visit our website, our hosting provider and any analytics or advertising technologies we use may collect technical information, including:</p>
+        <ul>
+          <li>Internet Protocol (IP) address</li>
+          <li>Browser type and version</li>
+          <li>Device type and operating system</li>
+          <li>Pages visited and time spent on pages</li>
+          <li>Referring websites and navigation activity</li>
+          <li>Approximate geographic location derived from an IP address</li>
+          <li>Cookie identifiers and similar online identifiers</li>
+        </ul>
+        <p>This information may help us maintain website security, understand visitor engagement, improve website performance, and measure the effectiveness of our content.</p>
+
+        <h3>2.3 Newsletter Information</h3>
+        <p>Visitors may subscribe to receive updates from Coach Uganda Journal and Coach Uganda Gives.</p>
+        <p>When you subscribe, we may collect your email address and information necessary to manage your subscription.</p>
+        <p>We use this information to send requested updates, articles, community stories, and relevant announcements.</p>
+        <p>You may unsubscribe from marketing emails at any time by using the unsubscribe option provided in those emails or by contacting us directly.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>How We Use Your Information</h2>
+        <p>We may use personal information to:</p>
+        <ol>
+          <li>Operate, maintain, and improve our website.</li>
+          <li>Respond to inquiries and communication requests.</li>
+          <li>Publish and distribute articles through Coach Uganda Journal.</li>
+          <li>Send newsletters and updates to subscribers.</li>
+          <li>Coordinate activities associated with Coach Uganda Gives.</li>
+          <li>Respond to donation and community-support inquiries.</li>
+          <li>Manage business collaborations, accommodation inquiries, and service requests.</li>
+          <li>Understand website traffic and audience engagement.</li>
+          <li>Protect the website against spam, fraud, misuse, and security threats.</li>
+          <li>Display advertising and measure advertising performance where advertising services are enabled.</li>
+          <li>Comply with applicable legal and regulatory obligations.</li>
+        </ol>
+        <p>We process personal information only where we have an appropriate legal basis, such as consent, legitimate interests, contractual necessity, or compliance with legal obligations, as applicable.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Cookies and Similar Technologies</h2>
+        <p>Our website may use cookies and similar technologies to improve functionality, remember preferences, measure website performance, and support advertising.</p>
+        <p>Cookies are small text files that websites may store on your device.</p>
+        <p>Cookies may include:</p>
+        <ul>
+          <li><strong>Essential Cookies:</strong> Necessary for website functionality, security, and certain requested services.</li>
+          <li><strong>Analytics Cookies:</strong> Used, where enabled, to understand visitor activity and improve website performance.</li>
+          <li><strong>Preference Cookies:</strong> Used to remember settings and visitor preferences.</li>
+          <li><strong>Advertising Cookies:</strong> Used, where advertising services are enabled, to deliver advertisements, measure their effectiveness, limit repeated advertisements, and, where permitted, support personalized advertising.</li>
+          <li><strong>Third-Party Cookies:</strong> May be placed by external services such as advertising providers, analytics platforms, embedded video providers, or social media services.</li>
+        </ul>
+        <p>Where required by applicable law, we will request your consent before activating non-essential cookies or similar tracking technologies.</p>
+        <p>You may also manage cookies through your browser settings. Disabling certain cookies may affect some website functions.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Google AdSense and Third-Party Advertising</h2>
+        <p>Coach Uganda may monetize its website through Google AdSense, Google-certified advertising networks, or other advertising partners.</p>
+        <p>If these services are enabled, third-party vendors, including Google, may use cookies, web beacons, IP addresses, or similar technologies to serve advertisements and measure advertising performance.</p>
+        <p>Third-party vendors, including Google, may use cookies to serve advertisements based on a visitor’s previous visits to this website or other websites.</p>
+        <p>Google’s use of advertising cookies enables Google and its partners to serve advertisements based on users’ visits to our website and other websites on the Internet.</p>
+        <p>Depending on applicable law, visitor preferences, and our advertising configuration, advertisements may be personalized or non-personalized.</p>
+        <p>Visitors may manage Google advertising personalization through: <a href="https://myadcenter.google.com/" target="_blank" rel="noopener">https://myadcenter.google.com/</a></p>
+        <p>Visitors may also learn about opting out of certain third-party interest-based advertising through: <a href="https://www.aboutads.info/" target="_blank" rel="noopener">https://www.aboutads.info/</a></p>
+        <p>For more information about how Google uses information from websites and applications using its services, visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a></p>
+        <p>Where other advertising networks are used, we will provide relevant information about those providers and available privacy choices.</p>
+        <p>We do not control all data processing performed independently by third-party advertising providers.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Google Analytics and Website Performance</h2>
+        <p>We may use Google Analytics or other website analytics services to understand how visitors interact with Coach Uganda.</p>
+        <p>If enabled, these services may collect information about:</p>
+        <ul>
+          <li>Pages visited</li>
+          <li>Website navigation</li>
+          <li>Device and browser characteristics</li>
+          <li>Approximate location</li>
+          <li>Visitor engagement</li>
+          <li>Website performance</li>
+        </ul>
+        <p>We use analytics information to improve content, usability, and website performance.</p>
+        <p>Where legally required, analytics technologies will operate only after appropriate visitor consent.</p>
+        <p>For more information about Google’s privacy practices, visit: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      </section>
+
+      <section class="reveal">
+        <h2>Coach Uganda Journal</h2>
+        <p>Coach Uganda Journal publishes articles and educational content covering topics such as health and wellness, food, home remedies, travel, lifestyle, personal development, and cultural experiences.</p>
+        <p>Visitors may read publicly available articles without creating an account unless a particular feature states otherwise.</p>
+        <p>When visitors subscribe to updates, submit inquiries, or interact with additional features, we may process the information necessary to provide those services.</p>
+        <p>We may use aggregated or appropriately anonymized audience statistics to understand which articles interest readers.</p>
+        <p>We do not intentionally use sensitive health information disclosed by visitors to create advertising profiles.</p>
+        <p>Content published in Coach Uganda Journal is intended for general educational and informational purposes and should not be considered a substitute for professional medical, financial, or legal advice.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Coach Uganda Gives and Community Support</h2>
+        <p>Coach Uganda Gives supports community-focused activities involving children, families, education, nutrition, clothing, household essentials, and opportunities for personal development.</p>
+        <p>Visitors may choose to support these activities through voluntary contributions or other forms of participation.</p>
+        <p>Depending on the activity, we may collect information necessary to:</p>
+        <ul>
+          <li>Respond to supporter inquiries</li>
+          <li>Coordinate voluntary contributions</li>
+          <li>Communicate with community partners</li>
+          <li>Organize support activities</li>
+          <li>Maintain appropriate contribution records</li>
+          <li>Meet applicable legal and accounting obligations</li>
+        </ul>
+        <p>Where payment services are used, transactions may be processed through independent providers such as PayPal, Airtel Money, or MTN Mobile Money.</p>
+        <p>These providers may process personal and transaction information according to their own privacy policies.</p>
+        <p>We do not request visitors to submit payment PINs, passwords, or other confidential payment credentials through our website.</p>
+        <p>We may publish stories, photographs, or videos relating to community activities. We seek appropriate permissions before publishing identifiable information or images, with particular care for children and vulnerable individuals.</p>
+        <p>We do not intentionally disclose sensitive personal information about beneficiaries without an appropriate lawful basis.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Children’s Privacy</h2>
+        <p>Coach Uganda is committed to protecting children’s privacy.</p>
+        <p>Although Coach Uganda Gives may feature educational and community initiatives supporting children, our website is intended for a general audience and is not designed to collect personal information directly from children under the age of 13.</p>
+        <p>We do not knowingly collect personal information from children under 13 through website forms without appropriate parental or guardian authorization.</p>
+        <p>Where higher age thresholds or additional protections are required by applicable law, we will follow those requirements.</p>
+        <p>We do not knowingly use children’s personal information for behavioral advertising.</p>
+        <p>If a parent or guardian believes that a child has provided personal information without appropriate authorization, they may contact us at <a href="mailto:info@coachuganda.com">info@coachuganda.com</a> to request review or deletion.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Third-Party Websites and Social Media</h2>
+        <p>Our website may contain links to external websites and social media platforms, including:</p>
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>TikTok</li>
+          <li>YouTube</li>
+          <li>PayPal</li>
+          <li>Other relevant service providers</li>
+        </ul>
+        <p>These third-party platforms operate under their own privacy policies and terms.</p>
+        <p>When you visit an external website, the third party may collect information according to its own practices.</p>
+        <p>Where we embed external videos or social media content, the relevant provider may collect technical information or use cookies, subject to applicable consent requirements.</p>
+        <p>We encourage visitors to review the privacy policies of external websites before providing personal information.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Sharing and Disclosure of Information</h2>
+        <p>We do not sell personal information to third parties for their independent marketing purposes.</p>
+        <p>We may share information with trusted service providers where necessary to operate our website and provide requested services.</p>
+        <p>These may include:</p>
+        <ul>
+          <li>Website hosting and technical support providers</li>
+          <li>Email and newsletter service providers</li>
+          <li>Website analytics providers</li>
+          <li>Advertising technology providers</li>
+          <li>Payment processing services</li>
+          <li>Security and spam-prevention providers</li>
+          <li>Professional advisers or authorities where legally required</li>
+        </ul>
+        <p>Advertising-related data processing may be treated as sharing or sale under certain privacy laws. Where applicable, we will provide the disclosures, consent mechanisms, and opt-out rights required by those laws.</p>
+        <p>We require service providers acting on our behalf to handle personal information appropriately and in accordance with applicable data protection requirements.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Data Security</h2>
+        <p>We take reasonable technical and organizational measures to protect personal information against unauthorized access, disclosure, alteration, loss, or misuse.</p>
+        <p>These measures may include secure website connections, access controls, software maintenance, and appropriate safeguards for information stored by our service providers.</p>
+        <p>However, no internet-based system can guarantee absolute security.</p>
+        <p>Visitors should avoid sending passwords, financial PINs, or unnecessary sensitive information through ordinary website contact forms.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Data Retention</h2>
+        <p>We retain personal information only for as long as reasonably necessary for the purposes described in this Privacy Policy or as required by applicable law.</p>
+        <p>Retention periods depend on the nature of the information, the purpose of processing, legal requirements, and the need to maintain appropriate records.</p>
+        <p>Newsletter subscription information may be retained until a visitor unsubscribes or requests deletion, subject to any necessary suppression records.</p>
+        <p>Contact inquiries and contribution records are retained only as long as necessary for legitimate operational, legal, or accounting purposes.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Your Privacy Rights</h2>
+        <p>Depending on your location and applicable law, you may have the right to:</p>
+        <ul>
+          <li>Request access to personal information held about you.</li>
+          <li>Request correction of inaccurate information.</li>
+          <li>Request deletion of personal information.</li>
+          <li>Withdraw consent where processing is based on consent.</li>
+          <li>Object to certain processing activities.</li>
+          <li>Request restrictions on processing.</li>
+          <li>Request a portable copy of eligible personal information.</li>
+          <li>Opt out of certain advertising-related data uses.</li>
+          <li>Lodge a complaint with an appropriate data protection authority.</li>
+        </ul>
+        <p>To exercise your rights, contact: <a href="mailto:info@coachuganda.com">info@coachuganda.com</a></p>
+        <p>We may request reasonable verification of identity before responding to certain requests.</p>
+        <p>We will respond within the time limits required by applicable law.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>International Data Transfers</h2>
+        <p>Coach Uganda may serve visitors from Uganda, Germany, other European countries, and locations around the world.</p>
+        <p>Some service providers may process information in countries outside the visitor’s country of residence.</p>
+        <p>Where applicable data protection laws require safeguards for international transfers, we will use appropriate measures, such as recognized contractual protections or other lawful transfer mechanisms.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Legal Compliance</h2>
+        <p>We aim to process personal information in accordance with applicable data protection requirements, including, where relevant:</p>
+        <ul>
+          <li>Uganda’s Data Protection and Privacy Act, 2019, and applicable regulations.</li>
+          <li>The European Union General Data Protection Regulation (GDPR).</li>
+          <li>Applicable German data protection requirements.</li>
+          <li>Other privacy and consumer protection laws that apply to our operations or visitors.</li>
+        </ul>
+        <p>The application of particular laws depends on the nature of our activities, the individuals concerned, and the relevant legal jurisdiction.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy to reflect changes in our website, services, advertising arrangements, legal obligations, or data protection practices.</p>
+        <p>When changes are made, the revised policy will be published on this page with an updated revision date.</p>
+        <p>Where legally required, we will provide additional notice or obtain renewed consent.</p>
+      </section>
+
+      <section class="reveal">
+        <h2>Contact Information</h2>
+        <p>For questions, concerns, or requests relating to this Privacy Policy or the handling of personal information, contact:</p>
+        <div class="contact-box">
+          <p><strong>Coach Uganda</strong></p>
+          <p><i class="fa-solid fa-globe"></i> Website: <a href="https://www.coachuganda.com/" target="_blank" rel="noopener">https://www.coachuganda.com/</a></p>
+          <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:info@coachuganda.com">info@coachuganda.com</a></p>
+          <p><i class="fa-solid fa-phone"></i> Telephone: +256 759 862 493</p>
+          <p><i class="fa-solid fa-location-dot"></i> Location: Kampala, Uganda</p>
+        </div>
+        <p>We welcome questions about how personal information is handled and will make reasonable efforts to respond appropriately.</p>
+      </section>
+
+      <div class="note reveal"><p>©️ 2026 Coach Uganda. All Rights Reserved.</p></div>
+
+      <div class="end-cta reveal">
+        <h3>Thanks for reading 💛</h3>
+        <p>Your trust matters. Head back to the homepage to explore Coach Uganda Journal, Coach Uganda Gives and more.</p>
+        <a href="index.html" class="btn-home"><i class="fa-solid fa-house"></i> Back to Home</a>
+      </div>
+
+    </article>
+  </div>
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-in">
+    <span>©️ 2026 Coach Uganda. All Rights Reserved.</span>
+      <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="child.html">Privacy Policy</a>
+      <a href="child.html">Child Protection</a>
+      <a href="disclaimer.html">Medical Disclaimer</a>
+    </nav>
+    </nav>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var panels = {
+    privacy: document.getElementById('panel-privacy'),
+    child:   document.getElementById('panel-child')
+  };
+  var tocBuilt = { privacy: false, child: false };
+  var spyObserver = null;
+  var revObserver = null;
+
+  var bar   = document.getElementById('progress');
+  var toTop = document.getElementById('toTop');
+  var tabbar = document.getElementById('tabbar');
+
+  /* ---------- Scroll progress + back-to-top ---------- */
+  function onScroll() {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    toTop.classList.toggle('show', h.scrollTop > 500);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  toTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ---------- Build table of contents for a panel ---------- */
+  function buildToc(key) {
+    if (tocBuilt[key]) return;
+    var panel = panels[key];
+    var nav = panel.querySelector('.toc');
+    var heads = panel.querySelectorAll('.doc h2');
+    heads.forEach(function (h, i) {
+      if (!h.id) h.id = key + '-sec-' + (i + 1);
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent.trim();
+      nav.appendChild(a);
+    });
+    tocBuilt[key] = true;
+  }
+
+  /* ---------- Scroll spy for the active panel ---------- */
+  function setSpy(key) {
+    if (spyObserver) spyObserver.disconnect();
+    if (!('IntersectionObserver' in window)) return;
+
+    var panel = panels[key];
+    var links = panel.querySelectorAll('.toc a');
+
+    spyObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          links.forEach(function (l) {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-160px 0px -65% 0px', threshold: 0 });
+
+    panel.querySelectorAll('.doc h2').forEach(function (h) {
+      spyObserver.observe(h);
+    });
+  }
+
+  /* ---------- Reveal animation ---------- */
+  function initReveal() {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    revObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          revObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(function (el) { revObserver.observe(el); });
+  }
+
+  /* ---------- Activate a tab ---------- */
+  function activate(key, updateHash, scrollToTop) {
+    tabs.forEach(function (t) {
+      var on = t.dataset.tab === key;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+
+    Object.keys(panels).forEach(function (k) {
+      panels[k].classList.toggle('active', k === key);
+    });
+
+    document.body.classList.toggle('tab-child', key === 'child');
+    document.body.classList.toggle('tab-privacy', key !== 'child');
+
+    buildToc(key);
+    setSpy(key);
+
+    /* Force-reveal anything already on screen in the new panel */
+    requestAnimationFrame(function () {
+      panels[key].querySelectorAll('.reveal').forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 1.15) el.classList.add('in');
+      });
+    });
+
+    if (updateHash) {
+      var hash = key === 'child' ? '#child-protection' : '#privacy';
+      try { history.replaceState(null, '', hash); } catch (e) { location.hash = hash; }
+    }
+
+    if (scrollToTop) {
+      var y = tabbar.getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo({ top: Math.max(y, 0), behavior: 'smooth' });
+    }
+
+    onScroll();
+  }
+
+  /* ---------- Tab clicks ---------- */
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      activate(t.dataset.tab, true, true);
+    });
+  });
+
+  /* ---------- Footer links inside this page ---------- */
+  document.querySelectorAll('[data-switch]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      activate(a.dataset.switch, true, true);
+    });
+  });
+
+  /* ---------- Initial state from URL hash ---------- */
+  function initialKey() {
+    var h = (location.hash || '').toLowerCase();
+    if (h === '#child-protection' || h === '#child' || h.indexOf('#child') === 0) return 'child';
+    return 'privacy';
+  }
+
+  initReveal();
+  activate(initialKey(), false, false);
+  onScroll();
+})();
+</script>
+</body>
+</html>

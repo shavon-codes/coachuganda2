@@ -1,0 +1,692 @@
+/* =========================================================
+   COACH UGANDA — EXPLORE TOPICS (WARM THEME INTEGRATION)
+   ========================================================= */
+
+/* 1. ROOT VARIABLES (From your original theme) */
+:root {
+  --yellow:        #FFC633;
+  --yellow-bright: #FFD766;
+  --red:           #EF3B2D;
+  --red-dark:      #C42C20;
+  --orange:        #FF6B35;
+
+  --charcoal:      #16110D;
+  --charcoal-2:    #211B16;
+  --cream:         #FFF9F2;
+  --white:         #FFFFFF;
+
+  --ink:           #16110D;
+  --ink-soft:      #4A4038;
+  --ink-mute:      #7D7065;
+  
+  --font-heading:  'Playfair Display', serif;
+  --font-display:  'Bebas Neue', sans-serif;
+  --font-body:     'Poppins', sans-serif;
+}
+
+/* 2. BASE RESET & TYPOGRAPHY */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 3. NAVBAR (Dark Theme with Yellow Accents) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  background: rgba(22, 17, 13, 0.95); /* Charcoal transparent */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 198, 51, 0.15);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--white);
+}
+.logo-badge {
+  background: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-bright) 55%, var(--red) 100%);
+  color: var(--charcoal);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+.logo small {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.3s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--yellow);
+}
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--yellow);
+}
+
+/* 4. TOPIC PAGE THEME VARIABLES (Mapped to Warm Colors) */
+.topic-page--health {
+  --acc: var(--yellow); 
+  --acc-2: var(--red);
+  --acc-soft: rgba(255, 198, 51, 0.12);
+  --acc-glow: rgba(255, 198, 51, 0.35);
+}
+.topic-page--remedies {
+  --acc: var(--orange); 
+  --acc-2: var(--red);
+  --acc-soft: rgba(255, 107, 53, 0.12);
+  --acc-glow: rgba(255, 107, 53, 0.35);
+}
+.topic-page--food {
+  --acc: var(--red); 
+  --acc-2: var(--red-dark);
+  --acc-soft: rgba(239, 59, 45, 0.12);
+  --acc-glow: rgba(239, 59, 45, 0.35);
+}
+.topic-page--lifestyle {
+  --acc: var(--yellow-bright); 
+  --acc-2: var(--yellow);
+  --acc-soft: rgba(255, 215, 102, 0.12);
+  --acc-glow: rgba(255, 215, 102, 0.35);
+}
+
+/* 5. HERO SECTION */
+.topic-hero {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 180px 0 80px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--charcoal);
+  overflow: hidden;
+}
+.topic-page--health .topic-hero { 
+  background-image: url('https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=2000&auto=format&fit=crop'); 
+}
+.topic-page--remedies .topic-hero { background-image: url('images/home2.webp'), url('images/home.webp'); }
+.topic-page--food .topic-hero { background-image: url('images/food2.jpg'), url('images/food3.jpg'); }
+.topic-page--lifestyle .topic-hero { background-image: url('images/life2.jfif'), url('images/life2.jfif'); }
+
+.topic-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(22, 17, 13, 0.4) 0%, rgba(22, 17, 13, 0.7) 50%, rgba(22, 17, 13, 0.95) 100%);
+  z-index: 1;
+}
+.topic-hero__inner { position: relative; z-index: 2; width: 100%; }
+
+.topic-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+.topic-hero__back:hover {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--charcoal);
+  transform: translateX(-4px);
+}
+.topic-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: var(--acc);
+  color: var(--charcoal); 
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 30px -10px var(--acc-glow);
+}
+.topic-hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 20px;
+  max-width: 900px;
+}
+.topic-hero p {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 650px;
+}
+
+/* 6. MAIN TWO-COLUMN CONTENT */
+.topic-main { padding: 100px 0; }
+.topic-main__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .topic-main__grid { grid-template-columns: 1.1fr 1fr; gap: 80px; }
+}
+.topic-main__text { max-width: 580px; }
+.topic-main__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+.topic-main__eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: var(--red);
+  border-radius: 2px;
+}
+.topic-main__text h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--charcoal);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.topic-main__text p {
+  font-size: 1.05rem;
+  color: var(--ink-mute);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* 7. IMAGE + FLOATING BADGE */
+.topic-main__visual { position: relative; }
+.topic-main__image {
+  width: 100%;
+  height: clamp(350px, 55vh, 550px);
+  border-radius: 24px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 30px 60px -20px rgba(22, 17, 13, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.topic-page--health .topic-main__image { 
+  background-image: url('images/health2.jpg'); 
+}
+.topic-main__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 55%, var(--acc-soft) 100%);
+}
+.topic-main__badge {
+  position: absolute;
+  bottom: -25px;
+  left: -20px;
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -15px rgba(22, 17, 13, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-left: 5px solid var(--yellow);
+  transition: transform 0.35s ease;
+}
+.topic-main__badge:hover { transform: translateY(-5px); }
+.topic-main__badge i {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 198, 51, 0.15);
+  color: var(--red);
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+.topic-main__badge strong { display: block; font-size: 1.5rem; color: var(--charcoal); line-height: 1; margin-bottom: 4px; }
+.topic-main__badge small { font-size: 0.75rem; color: var(--ink-mute); letter-spacing: 0.5px; text-transform: uppercase; font-weight: 600; }
+
+/* 8. DISCOVER GRID */
+.topic-discover {
+  padding: 100px 0;
+  background: var(--white);
+}
+.topic-discover__head {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+.topic-discover__head span {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+.topic-discover__head h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+.topic-discover__head p { color: var(--ink-mute); font-size: 1.05rem; }
+
+.topic-discover__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.topic-tile {
+  background: var(--cream);
+  padding: 36px 30px;
+  border-radius: 20px;
+  border: 1.5px solid transparent;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.topic-tile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--yellow), var(--red));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.topic-tile:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 198, 51, 0.3);
+  box-shadow: 0 20px 40px -20px rgba(22, 17, 13, 0.15);
+  background: #fff;
+}
+.topic-tile:hover::before { transform: scaleX(1); }
+.topic-tile__icon {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 198, 51, 0.15);
+  color: var(--red);
+  border-radius: 16px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  transition: all 0.35s ease;
+}
+.topic-tile:hover .topic-tile__icon {
+  background: linear-gradient(135deg, var(--yellow), var(--red));
+  color: #fff;
+  transform: rotate(-6deg) scale(1.05);
+}
+.topic-tile h3 { font-size: 1.2rem; color: var(--charcoal); margin-bottom: 10px; font-weight: 700; }
+.topic-tile p { font-size: 0.95rem; color: var(--ink-mute); line-height: 1.6; }
+
+/* 9. NEWSLETTER & FOOTER */
+.gives-stay {
+  background: var(--charcoal-2);
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+.gives-title { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 10px; color: var(--yellow); }
+.gives-text { color: rgba(255,255,255,0.7); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+.stay-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.stay-form input {
+  flex: 1;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 198, 51, 0.2);
+  background: var(--charcoal);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+}
+.stay-form input:focus { border-color: var(--yellow); }
+.stay-form button {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, var(--yellow), var(--red));
+  color: var(--charcoal);
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.stay-form button:hover { 
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(239, 59, 45, 0.6);
+}
+
+.journal-footer {
+  background: var(--charcoal);
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 198, 51, 0.1);
+}
+
+/* 10. RESPONSIVE MOBILE FIXES */
+@media (max-width: 768px) {
+  .nav-links { display: none; } 
+  .hamburger { display: block; }
+  .topic-hero { padding: 130px 0 60px; min-height: 60vh; }
+  .topic-hero h1 { font-size: 2.2rem; }
+  .topic-main__badge { bottom: -15px; left: 10px; padding: 12px 16px; }
+  .stay-form { flex-direction: column; padding: 0 20px; }
+}
+/* =========================================================
+   11. NAV ACTIONS + LANGUAGE SWITCHER + MOBILE MENU PANEL
+   ========================================================= */
+
+/* Right-side cluster (language + hamburger) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --- Language switcher --- */
+.lang-switcher { position: relative; }
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 198, 51, 0.25);
+  border-radius: 50px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  border-color: var(--yellow);
+  background: rgba(255, 198, 51, 0.1);
+  color: var(--yellow);
+  outline: none;
+}
+.lang-btn i.fa-globe { color: var(--yellow); font-size: 0.95rem; }
+.lang-btn__chevron {
+  font-size: 0.65rem;
+  opacity: 0.75;
+  transition: transform 0.3s ease;
+}
+.lang-btn[aria-expanded="true"] .lang-btn__chevron { transform: rotate(180deg); }
+
+/* Dropdown menu */
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  inset-inline-end: 0;              /* logical: right in LTR, left in RTL */
+  min-width: 200px;
+  list-style: none;
+  background: var(--charcoal-2);
+  border: 1px solid rgba(255, 198, 51, 0.2);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  z-index: 1200;
+}
+.lang-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-align: start;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.lang-option:hover,
+.lang-option:focus-visible {
+  background: rgba(255, 198, 51, 0.12);
+  color: var(--yellow);
+  outline: none;
+}
+.lang-option.active {
+  background: linear-gradient(135deg, rgba(255, 198, 51, 0.22), rgba(239, 59, 45, 0.16));
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.lang-code {
+  display: inline-grid;
+  place-items: center;
+  min-width: 30px;
+  height: 22px;
+  padding: 0 6px;
+  background: rgba(255, 198, 51, 0.15);
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--yellow);
+}
+.lang-option.active .lang-code {
+  background: var(--yellow);
+  color: var(--charcoal);
+}
+
+/* --- Hamburger active state (bars → X) --- */
+.hamburger { transition: color 0.3s ease; }
+.hamburger.active .fa-bars::before { content: "\f00d"; } /* Font Awesome xmark */
+.hamburger:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   12. MOBILE NAV PANEL (slide-down, replaces display:none)
+   ========================================================= */
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;                          /* override original */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--charcoal-2);
+    border-top: 1px solid rgba(255, 198, 51, 0.15);
+    border-bottom: 1px solid rgba(255, 198, 51, 0.15);
+    padding: 12px 24px 20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  }
+  .nav-links.open {
+    max-height: 400px;
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-links li { border-bottom: 1px solid rgba(255, 198, 51, 0.08); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-link {
+    display: block;
+    padding: 14px 4px;
+    font-size: 1rem;
+  }
+  .lang-btn__chevron { display: none; }     /* keep compact on mobile */
+  .lang-menu { min-width: 180px; }
+}
+
+/* Very small phones: drop the label text, keep the globe */
+@media (max-width: 400px) {
+  .lang-btn__label { display: none; }
+  .lang-btn { padding: 8px 11px; }
+}
+
+/* =========================================================
+   13. RTL (Arabic) ADJUSTMENTS
+   ========================================================= */
+[dir="rtl"] body,
+[dir="rtl"] .nav-link,
+[dir="rtl"] .lang-btn,
+[dir="rtl"] .lang-option {
+  font-family: 'Cairo', var(--font-body);
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .topic-hero h1,
+[dir="rtl"] .topic-main__text h2,
+[dir="rtl"] .topic-discover__head h2,
+[dir="rtl"] .gives-title {
+  font-family: 'Cairo', var(--font-heading);
+}
+
+/* Mirror the back-button hover arrow direction */
+[dir="rtl"] .topic-hero__back:hover { transform: translateX(4px); }
+
+/* Mirror the floating badge (was left-anchored) */
+[dir="rtl"] .topic-main__badge {
+  left: auto;
+  right: -20px;
+  border-left: none;
+  border-right: 5px solid var(--yellow);
+}
+@media (max-width: 768px) {
+  [dir="rtl"] .topic-main__badge {
+    right: 10px;
+    left: auto;
+  }
+}
+.disclaimer {
+  margin-top: 25px;
+  padding: 15px 20px;
+  background: var(--acc-soft);
+  border-left: 4px solid var(--acc-2);
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+[dir="rtl"] .disclaimer {
+  border-left: none;
+  border-right: 4px solid var(--acc-2);
+  border-radius: 8px 0 0 8px;
+}
+
+/* =========================================================
+   MAIN IMAGES (FORCED FIX)
+   ========================================================= */
+
+/* Home Remedies Main Image */
+body.topic-page--remedies .topic-main__image {
+  background-image: url('https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1000&auto=format&fit=crop') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* Food Around the World Main Image */
+body.topic-page--food .topic-main__image {
+  background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1000&auto=format&fit=crop') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* Lifestyle & Experience Main Image */
+body.topic-page--lifestyle .topic-main__image {
+  background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1000&auto=format&fit=crop') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health &amp; Wellness | Coach Uganda Journal</title>
+<link rel="stylesheet" href="journalpages.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="topic-page topic-page--health">
+
+<nav class="navbar scrolled">
+  <div class="nav-container">
+
+    <a href="index.html" class="logo" aria-label="Coach Uganda home">
+      <span class="logo-badge"><span class="logo-c">C</span><span class="logo-dot">·</span><span class="logo-u">U</span></span>
+      <small>Coach Uganda</small>
+    </a>
+
+    <!-- ===== NAV LINKS (collapses into a panel on mobile) ===== -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+      <li><a href="give.html" class="nav-link" data-i18n="nav.gives">Gives ❤️</a></li>
+      <li><a href="journal.html" class="nav-link active" data-i18n="nav.journal">Journal</a></li>
+    </ul>
+
+    <!-- ===== RIGHT SIDE ACTIONS ===== -->
+    <div class="nav-actions">
+
+      <!-- Language switcher -->
+      <div class="lang-switcher">
+        <button type="button" class="lang-btn" id="langBtn"
+                aria-haspopup="true" aria-expanded="false"
+                aria-label="Select language" data-i18n-aria="lang.select">
+          <i class="fa-solid fa-globe"></i>
+          <span class="lang-btn__label" id="langLabel">English</span>
+          <i class="fa-solid fa-chevron-down lang-btn__chevron"></i>
+        </button>
+
+        <ul class="lang-menu" id="langMenu" role="menu" aria-labelledby="langBtn">
+          <li role="none">
+            <button type="button" class="lang-option active" data-lang="en" role="menuitemradio" aria-checked="true">
+              <span class="lang-code">EN</span> English
+            </button>
+          </li>
+          <li role="none">
+            <button type="button" class="lang-option" data-lang="fr" role="menuitemradio" aria-checked="false">
+              <span class="lang-code">FR</span> Français
+            </button>
+          </li>
+          <li role="none">
+            <button type="button" class="lang-option" data-lang="de" role="menuitemradio" aria-checked="false">
+              <span class="lang-code">DE</span> Deutsch
+            </button>
+          </li>
+          <li role="none">
+            <button type="button" class="lang-option" data-lang="es" role="menuitemradio" aria-checked="false">
+              <span class="lang-code">ES</span> Español
+            </button>
+          </li>
+          <li role="none">
+            <button type="button" class="lang-option" data-lang="it" role="menuitemradio" aria-checked="false">
+              <span class="lang-code">IT</span> Italiano
+            </button>
+          </li>
+          <li role="none">
+            <button type="button" class="lang-option" data-lang="ar" role="menuitemradio" aria-checked="false">
+              <span class="lang-code">AR</span> العربية
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger" role="button" tabindex="0"
+           aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+<a href="https://wa.me/491771726078" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span class="whatsapp-pulse"></span>
+</a>
+
+<section class="topic-hero">
+  <div class="topic-hero__overlay"></div>
+  <div class="topic-hero__inner container">
+    <a href="journal.html" class="topic-hero__back">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span data-i18n="hero.back">All Topics</span>
+    </a>
+    <div>
+      <span class="topic-hero__tag">
+        <i class="fa-solid fa-leaf"></i>
+        <span data-i18n="hero.tag">Health &amp; Wellness</span>
+      </span>
+    </div>
+    <h1 data-i18n="hero.title">Feel good. Live well. Take care of you. 🌿</h1>
+    <p data-i18n="hero.sub">Your well-being deserves a little attention every day.</p>
+  </div>
+</section>
+
+<section class="topic-main">
+  <div class="container">
+    <div class="topic-main__grid">
+      <div class="topic-main__text">
+        <span class="topic-main__eyebrow" data-i18n="main.eyebrow">Small steps. Big wellness.</span>
+        <h2 data-i18n="main.title">A little care, every day.</h2>
+        <p data-i18n="main.p1">Your well-being deserves a little attention every day. Explore inspiring articles on healthy living, nutrition, movement, self-care, mental wellness, better sleep, and finding balance in everyday life.</p>
+        <p data-i18n="main.p2">Come in, explore, and discover simple ideas that can help you build a happier, healthier lifestyle — one step at a time.</p>
+      </div>
+      <div class="topic-main__visual">
+        <div class="topic-main__image"></div>
+        <div class="topic-main__badge">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <div>
+            <strong>8</strong>
+            <small data-i18n="badge.label">Pillars of wellness</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="topic-discover">
+  <div class="container">
+    <div class="topic-discover__head">
+      <span data-i18n="discover.kicker">What you'll discover</span>
+      <h2 data-i18n="discover.title">Explore your wellness</h2>
+      <p data-i18n="discover.sub">Practical, everyday ideas to support your mind, body, and soul.</p>
+    </div>
+    <div class="topic-discover__grid">
+
+      <div class="topic-tile">
+        <div class="topic-tile__icon"><i class="fa-solid fa-apple-whole"></i></div>
+        <h3 data-i18n="tile1.title">Nutrition</h3>
+        <p data-i18n="tile1.text">Simple, nourishing food choices that fuel your body and mind.</p>
+      </div>
+
+      <div class="topic-tile">
+        <div class="topic-tile__icon"><i class="fa-solid fa-person-running"></i></div>
+        <h3 data-i18n="tile2.title">Movement</h3>
+        <p data-i18n="tile2.text">Small daily movements that add up to a stronger, more energetic you.</p>
+      </div>
+
+      <div class="topic-tile">
+        <div class="topic-tile__icon"><i class="fa-solid fa-spa"></i></div>
+        <h3 data-i18n="tile3.title">Self-Care</h3>
+        <p data-i18n="tile3.text">Gentle rituals and habits that help you reset and recharge.</p>
+      </div>
+
+      <div class="topic-tile">
+        <div class="topic-tile__icon"><i class="fa-solid fa-brain"></i></div>
+        <h3 data-i18n="tile4.title">Mental Wellness</h3>
+        <p data-i18n="tile4.text">Mindfulness, stress relief, and emotional well-being tips.</p>
+      </div>
+
+      <div class="topic-tile">
+        <div class="topic-tile__icon"><i class="fa-solid fa-moon"></i></div>
+        <h3 data-i18n="tile5.title">Better Sleep</h3>
+        <p data-i18n="tile5.text">Rest deeper with simple evening routines and healthier sleep habits.</p>
+      </div>
+
+      <div class="topic-tile">
+        <div class="topic-tile__icon"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h3 data-i18n="tile6.title">Balance</h3>
+        <p data-i18n="tile6.text">Finding harmony between work, rest, and everything in between.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="gives-stay">
+  <div class="container">
+    <h2 class="gives-title" data-i18n="stay.title">Stay Connected with Coach Uganda</h2>
+    <p class="gives-text" style="margin-bottom:30px;" data-i18n="stay.sub">
+      Don't miss the next update. Subscribe with your personal email to receive our newsletter directly in your inbox.
+    </p>
+    <form class="stay-form" id="stayForm" novalidate>
+      <input type="email" id="stayEmail" name="email" placeholder="Your personal email address" required
+             aria-label="Your email address"
+             data-i18n-placeholder="stay.placeholder"
+             data-i18n-aria="stay.placeholder">
+      <button type="submit" id="stayBtn">
+        <span class="btn-label" data-i18n="stay.btn">Subscribe</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+      <p class="form-message" id="stayMessage" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="journal-footer">
+  <div class="container">
+    <p data-i18n="footer.rights">&copy; 2026 Coach Uganda. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Language engine first, then your existing scripts -->
+<script src="language.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

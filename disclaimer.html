@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical &amp; Health Disclaimer | Coach Uganda Journal</title>
+<meta name="description" content="Coach Uganda Journal Medical and Health Disclaimer — general educational information only, not a substitute for professional medical advice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ================= THEME ================= */
+:root{
+  --bg:#080b10; --line:rgba(255,255,255,.09);
+  --text:#eaf1fa; --soft:#c6d2e2; --muted:#97a6ba;
+  --accent:#f7c948; --accent2:#ff8a3d;
+  --health:#4ade80; --danger:#ff5a6a; --danger2:#ff2d4d;
+  --glow1:rgba(247,201,72,.16); --glow3:rgba(247,201,72,.09);
+  --accent-glow:rgba(247,201,72,.75);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{
+  font-family:'Poppins',system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.78;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(700px 420px at 12% -8%,rgba(247,201,72,.16),transparent 60%),
+    radial-gradient(620px 420px at 92% 4%,rgba(74,222,128,.10),transparent 62%),
+    radial-gradient(820px 520px at 50% 108%,rgba(255,138,61,.09),transparent 66%),
+    linear-gradient(180deg,#080b10,#0a0f17 55%,#080b10);
+}
+img{max-width:100%;display:block}
+a{color:var(--accent2)}
+
+/* ================= SCROLL PROGRESS ================= */
+.progress{
+  position:fixed;top:0;left:0;height:3px;width:0;z-index:100;
+  background:linear-gradient(90deg,var(--accent),var(--health),var(--accent2));
+  box-shadow:0 0 14px var(--accent-glow);transition:width .1s linear;
+}
+
+/* ================= TOP> BAR ================= */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(8,11,16,.82);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-in{
+  max-width:1180px;margin:0 auto;padding:13px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);font-weight:700}
+.brand-mark{
+  width:42px;height:42px;border-radius:13px;flex:none;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#0a0d12;font-weight:800;font-size:15px;letter-spacing:-.03em;
+  box-shadow:0 10px 22px -8px var(--accent-glow);
+}
+.brand b{display:block;font-size:15px;line-height:1.2}
+.brand small{display:block;font-size:10.5px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+
+.btn-home{
+  display:inline-flex;align-items:center;gap:9px;padding:11px 20px;border-radius:999px;
+  font-weight:600;font-size:14px;text-decoration:none;color:#0a0d12;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 10px 26px -10px var(--accent-glow);
+  transition:.25s;white-space:nowrap;border:none;cursor:pointer;
+}
+.btn-home:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px var(--accent-glow)}
+
+/* ================= HERO ================= */
+.hero{
+  padding:80px 22px 120px;position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+.hero-in{max-width:1000px;margin:0 auto;position:relative;z-index:3}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);padding:7px 16px;border-radius:999px;
+  border:1px solid rgba(247,201,72,.35);background:rgba(247,201,72,.08);
+}
+.eyebrow i{color:var(--health);animation:heartBeat 1.4s ease-in-out infinite}
+@keyframes heartBeat{
+  0%,100%{transform:scale(1)}
+  15%{transform:scale(1.28)}
+  30%{transform:scale(1)}
+  45%{transform:scale(1.22)}
+  60%{transform:scale(1)}
+}
+h1{
+  font-size:clamp(2.1rem,5.8vw,3.6rem);line-height:1.08;font-weight:800;
+  letter-spacing:-.03em;margin:22px 0 18px;
+}
+.grad{
+  background:linear-gradient(115deg,#fff 5%,var(--accent) 40%,var(--health) 75%,var(--accent2) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.lead{color:var(--muted);max-width:72ch;font-size:1.05rem}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.pill{
+  display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--muted);
+  background:rgba(255,255,255,.045);border:1px solid var(--line);
+  padding:9px 16px;border-radius:999px;
+}
+.pill i{color:var(--accent);font-size:12px}
+
+/* Floating background icons */
+.hero-bg{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.float-icon{
+  position:absolute;color:var(--accent);opacity:.06;
+  animation:floatY 9s ease-in-out infinite;
+}
+.fi-1{top:12%;left:4%;font-size:6rem}
+.fi-2{top:58%;left:9%;font-size:4rem;color:var(--health);opacity:.08;animation-delay:-2s}
+.fi-3{top:20%;right:6%;font-size:5rem;animation-delay:-4s}
+.fi-4{top:68%;right:10%;font-size:6rem;color:var(--health);opacity:.07;animation-delay:-1s}
+.fi-5{top:6%;left:46%;font-size:3.5rem;opacity:.05;animation-delay:-3s}
+.fi-6{bottom:18%;left:32%;font-size:4.5rem;color:var(--health);opacity:.05;animation-delay:-5s}
+@keyframes floatY{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  50%{transform:translateY(-24px) rotate(6deg)}
+}
+
+/* Animated ECG line */
+.ecg{
+  position:absolute;bottom:0;left:0;right:0;height:110px;width:100%;
+  z-index:2;pointer-events:none;
+}
+.ecg path{
+  fill:none;stroke:url(#ecgGrad);stroke-width:3;
+  stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:140 1400;
+  animation:ecgRun 4.5s linear infinite;
+}
+@keyframes ecgRun{
+  0%{stroke-dashoffset:1540}
+  100%{stroke-dashoffset:0}
+}
+
+/* ================= QUICK FACTS ================= */
+.facts{
+  max-width:1180px;margin:-46px auto 0;padding:0 22px;
+  position:relative;z-index:5;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+}
+.fact{
+  display:flex;align-items:center;gap:14px;
+  padding:20px 22px;border-radius:16px;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+  border:1px solid var(--line);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transition:transform .25s,border-color .25s;
+}
+.fact:hover{transform:translateY(-3px);border-color:rgba(247,201,72,.35)}
+.fact i{font-size:24px;color:var(--accent);flex:none}
+.fact b{display:block;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.15}
+.fact span{font-size:12.5px;color:var(--muted);display:block;margin-top:2px}
+
+/* ================= EMERGENCY RIBBON ================= */
+.emergency-ribbon{
+  max-width:1180px;margin:22px auto 0;padding:14px 22px;
+  display:flex;align-items:center;gap:14px;
+  background:linear-gradient(90deg,rgba(255,90,106,.22),rgba(255,45,77,.04));
+  border:1px solid rgba(255,90,106,.45);
+  border-radius:14px;
+  color:#ffd7dc;font-size:14px;font-weight:600;line-height:1.5;
+}
+.emergency-ribbon i{
+  font-size:20px;color:var(--danger);flex:none;
+  animation:pulseIcon 1.8s ease-in-out infinite;
+}
+@keyframes pulseIcon{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.25)}
+}
+
+/* ================= LAYOUT ================= */
+.layout{
+  max-width:1180px;margin:0 auto;padding:54px 22px 90px;
+  display:grid;grid-template-columns:280px minmax(0,1fr);
+  gap:44px;align-items:start;
+}
+
+/* ================= TOC ================= */
+.toc-card{
+  position:sticky;top:96px;border-radius:20px;padding:22px;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));
+  border:1px solid var(--line);backdrop-filter:blur(12px);
+}
+.toc-card h4{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px;
+}
+.toc{display:flex;flex-direction:column;gap:2px;max-height:62vh;overflow-y:auto;scrollbar-width:thin}
+.toc::-webkit-scrollbar{width:5px}
+.toc::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:9px}
+.toc a{
+  font-size:13px;color:var(--muted);text-decoration:none;
+  padding:8px 12px;border-radius:10px;line-height:1.45;
+  border-left:2px solid transparent;transition:.2s;
+}
+.toc a:hover{color:#fff;background:rgba(255,255,255,.05)}
+.toc a.active{color:#fff;background:rgba(247,201,72,.12);border-left-color:var(--accent)}
+
+/* ================= DOCUMENT ================= */
+.doc{min-width:0}
+.doc-head{
+  margin-bottom:30px;padding:24px 26px;border-radius:20px;
+  border:1px dashed rgba(255,255,255,.16);
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+  position:relative;overflow:hidden;
+}
+.doc-head::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--health),var(--accent2));
+}
+.doc-badge{
+  display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+  padding:6px 14px;border-radius:999px;margin-bottom:14px;
+  border:1px solid rgba(247,201,72,.35);background:rgba(247,201,72,.08);
+}
+.doc-head h2{
+  font-size:1.35rem;font-weight:700;color:#fff;
+  letter-spacing:-.01em;margin-bottom:10px;
+}
+.doc-head .meta{
+  display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.9rem;color:var(--muted);
+}
+.doc-head .meta strong{color:var(--soft);font-weight:600}
+
+/* Section cards */
+.doc section{
+  position:relative;margin-bottom:26px;
+  padding:28px 28px 12px;border-radius:20px;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+  transition:transform .3s, border-color .3s;
+}
+.doc section:hover{transform:translateY(-2px)}
+.doc section::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  padding:1px;
+  background:linear-gradient(135deg,var(--accent),var(--health),var(--accent2));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  opacity:0;transition:opacity .3s;pointer-events:none;
+}
+.doc section:hover::before{opacity:1}
+
+/* Section head with icon */
+.sec-head{
+  display:flex;align-items:center;gap:16px;
+  margin-bottom:18px;
+}
+.sec-icon{
+  flex:none;width:48px;height:48px;border-radius:14px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#0a0d12;font-size:19px;
+  box-shadow:0 10px 22px -8px var(--accent-glow);
+}
+.sec-head h2{
+  font-size:1.18rem;font-weight:700;line-height:1.35;
+  color:#fff;letter-spacing:-.01em;margin:0;
+}
+
+/* Body text */
+.doc p{color:var(--soft);margin-bottom:14px;font-size:.96rem}
+.doc ul{margin:0 0 16px;padding:0;list-style:none}
+.doc ul li{
+  position:relative;padding-left:26px;margin-bottom:10px;
+  color:var(--soft);font-size:.96rem;
+}
+.doc ul li::before{
+  content:"";position:absolute;left:6px;top:.66em;
+  width:7px;height:7px;border-radius:2px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  transform:rotate(45deg);
+}
+.doc strong{color:#fff;font-weight:600}
+.doc a{color:var(--accent2);text-decoration:none;border-bottom:1px dotted currentColor;word-break:break-word}
+.doc a:hover{color:#fff}
+
+/* ---- Emergency section (11) ---- */
+.doc section.emergency{
+  background:linear-gradient(180deg,rgba(255,90,106,.08),rgba(255,90,106,.015));
+  border-color:rgba(255,90,106,.35);
+}
+.doc section.emergency .sec-icon{
+  background:linear-gradient(135deg,var(--danger),var(--danger2));
+  color:#fff;
+  box-shadow:0 10px 24px -8px rgba(255,90,106,.85);
+  animation:pulseIcon 2s ease-in-out infinite;
+}
+.doc section.emergency::before{
+  background:linear-gradient(135deg,var(--danger),var(--danger2));
+}
+.doc section.emergency:hover{border-color:rgba(255,90,106,.6)}
+
+.alert-danger{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:22px 24px;border-radius:16px;margin:4px 0 20px;
+  background:linear-gradient(135deg,rgba(255,90,106,.24),rgba(255,45,77,.05));
+  border:1px solid rgba(255,90,106,.5);
+  color:#ffe2e6;font-weight:700;font-size:.98rem;letter-spacing:.02em;
+  line-height:1.55;
+  animation:alertPulse 2.4s ease-in-out infinite;
+}
+.alert-danger i{font-size:26px;color:#ffb0b9;flex:none;margin-top:2px}
+@keyframes alertPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,90,106,.35)}
+  50%{box-shadow:0 0 0 14px rgba(255,90,106,0)}
+}
+
+/* ---- Contact box ---- */
+.contact-box{
+  margin:6px 0 18px;padding:24px 26px;border-radius:16px;
+  border:1px solid var(--line);
+  background:linear-gradient(135deg,rgba(247,201,72,.06),rgba(255,255,255,.02));
+}
+.contact-box p{margin:0 0 10px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start}
+.contact-box p:last-child{margin:0}
+.contact-box i{color:var(--accent);width:18px;flex:none;margin-top:.35em}
+.contact-box .who{font-size:1.02rem;color:#fff}
+
+/* ---- Ending / copyright ---- */
+.note{
+  margin:8px 0 26px;padding:22px 24px;border-radius:20px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  text-align:center;font-size:.9rem;color:var(--muted);
+}
+
+/* ================= END CTA ================= */
+.end-cta{
+  margin-top:16px;text-align:center;padding:46px 26px;border-radius:26px;
+  border:1px solid var(--line);
+  background:radial-gradient(circle at 50% 0%,var(--glow1),transparent 62%),rgba(255,255,255,.028);
+}
+.end-cta h3{font-size:1.4rem;font-weight:700;margin-bottom:10px}
+.end-cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px;font-size:.95rem}
+.end-cta .btn-home{font-size:15px;padding:13px 26px}
+
+/* ================= FOOTER ================= */
+.site-footer{border-top:1px solid var(--line);background:rgba(0,0,0,.28);padding:34px 22px}
+.footer-in{
+  max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;
+  align-items:center;justify-content:space-between;font-size:13.5px;color:var(--muted);
+}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px}
+.footer-links a{color:var(--muted);text-decoration:none;transition:.2s}
+.footer-links a:hover{color:var(--accent)}
+
+/* ================= BACK TO TOP ================= */
+.to-top{
+  position:fixed;right:20px;bottom:22px;width:48px;height:48px;border-radius:50%;
+  border:none;display:grid;place-items:center;cursor:pointer;color:#0a0d12;z-index:70;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 14px 30px -10px var(--accent-glow);
+  opacity:0;pointer-events:none;transform:translateY(14px);transition:.3s;
+}
+.to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+/* ================= REVEAL ================= */
+.reveal{opacity:0;transform:translateY(18px);transition:.6s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:980px){
+  .layout{grid-template-columns:1fr;gap:28px;padding-top:40px}
+  .toc-card{position:static;order:-1}
+  .toc{max-height:none}
+  .facts{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .hero{padding:52px 18px 100px}
+  .doc section{padding:22px 18px 6px}
+  .sec-head{gap:12px}
+  .sec-icon{width:42px;height:42px;font-size:17px;border-radius:12px}
+  .sec-head h2{font-size:1.05rem}
+  .brand small{display:none}
+  .btn-home{padding:10px 16px;font-size:13px}
+  .btn-home .lbl{display:none}
+  .btn-home::after{content:"Home";font-weight:600}
+  .facts{grid-template-columns:1fr;margin-top:-30px}
+  html{scroll-padding-top:100px}
+  .alert-danger{flex-direction:column;gap:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+  <div class="topbar-in">
+    <a href="index.html" class="brand">
+       <span class="logo-badge">
+        <span class="logo-c">C</span><span class="logo-dot">·</span><span class="logo-u">U</span>
+      </span>
+      <div><b>Coach Uganda</b><small>Medical &amp; Health</small></div>
+    </a>
+    <a href="index.html" class="btn-home"><i class="fa-solid fa-house"></i><span class="lbl">Back to Home</span></a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <i class="float-icon fi-1 fa-solid fa-heart-pulse"></i>
+    <i class="float-icon fi-2 fa-solid fa-pills"></i>
+    <i class="float-icon fi-3 fa-solid fa-leaf"></i>
+    <i class="float-icon fi-4 fa-solid fa-stethoscope"></i>
+    <i class="float-icon fi-5 fa-solid fa-apple-whole"></i>
+    <i class="float-icon fi-6 fa-solid fa-brain"></i>
+  </div>
+  <div class="hero-in">
+    <span class="eyebrow"><i class="fa-solid fa-heart-pulse"></i> Health &amp; Wellness Notice</span>
+    <h1>Medical &amp; <span class="grad">Health Disclaimer</span></h1>
+    <p class="lead">Coach Uganda Journal publishes educational health and wellness information. Please read this disclaimer carefully before acting on anything you read on our platform.</p>
+    <div class="pills">
+      <span class="pill"><i class="fa-solid fa-calendar-check"></i> Effective: 19 November 2026</span>
+      <span class="pill"><i class="fa-solid fa-rotate"></i> Last Updated: 19 November 2026</span>
+      <span class="pill"><i class="fa-solid fa-globe"></i> coachuganda.com</span>
+      <span class="pill"><i class="fa-solid fa-graduation-cap"></i> Educational Use Only</span>
+    </div>
+  </div>
+  <svg class="ecg" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="ecgGrad" x1="0" x2="1">
+        <stop offset="0" stop-color="#f7c948" stop-opacity="0"/>
+        <stop offset=".2" stop-color="#f7c948"/>
+        <stop offset=".5" stop-color="#4ade80"/>
+        <stop offset=".8" stop-color="#f7c948"/>
+        <stop offset="1" stop-color="#f7c948" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,55 L150,55 L165,55 L175,22 L190,82 L205,28 L218,55 L400,55 L415,55 L425,18 L440,88 L455,22 L470,55 L650,55 L665,55 L675,22 L690,82 L705,28 L718,55 L900,55 L915,55 L925,18 L940,88 L955,22 L970,55 L1200,55"/>
+  </svg>
+</section>
+
+<!-- ================= QUICK FACTS ================= -->
+<div class="facts">
+  <div class="fact">
+    <i class="fa-solid fa-shield-heart"></i>
+    <div><b>14</b><span>Detailed Sections</span></div>
+  </div>
+  <div class="fact">
+    <i class="fa-solid fa-book-medical"></i>
+    <div><b>Educational</b><span>Not Medical Advice</span></div>
+  </div>
+  <div class="fact">
+    <i class="fa-solid fa-user-doctor"></i>
+    <div><b>Always</b><span>Consult a Professional</span></div>
+  </div>
+  <div class="fact">
+    <i class="fa-solid fa-rotate"></i>
+    <div><b>Nov 2026</b><span>Last Updated</span></div>
+  </div>
+</div>
+
+<!-- ================= EMERGENCY RIBBON ================= -->
+<div class="emergency-ribbon">
+  <i class="fa-solid fa-truck-medical"></i>
+  <span>In a medical emergency, call your local emergency number immediately. Do not rely on this page for emergency assistance.</span>
+</div>
+
+<!-- ================= BODY ================= -->
+<div class="layout">
+
+  <!-- TOC -->
+  <aside class="toc-card">
+    <h4><i class="fa-solid fa-list-ul"></i> On This Page</h4>
+    <nav class="toc" id="toc" aria-label="Contents"></nav>
+  </aside>
+
+  <!-- Document -->
+  <article class="doc">
+
+    <div class="doc-head reveal">
+      <span class="doc-badge"><i class="fa-solid fa-file-medical"></i> Medical &amp; Health Disclaimer</span>
+      <h2>Coach Uganda Journal</h2>
+      <div class="meta">
+        <span>< <a href="https://www.coachuganda.com/" target="_blank" rel="noopener">https://www.coachuganda.com/</a></span>
+        <span><strong>Effective Date:</strong> 19 November 2026</span>
+        <span><strong>Last Updated:</strong> 19 November 2026</span>
+      </div>
+    </div>
+
+    <!-- 1 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-stethoscope"></i></div>
+        <h2>1. General Medical Disclaimer</h2>
+      </div>
+      <p>Welcome to Coach Uganda Journal, a content platform dedicated to sharing educational articles, personal experiences, cultural knowledge, health and wellness information, traditional home remedies, nutrition, food, and lifestyle inspiration.</p>
+      <p>All health-related information published on Coach Uganda Journal is provided strictly for general informational, educational, and awareness purposes only.</p>
+      <p>The content published on this website is not intended to constitute or replace professional medical advice, diagnosis, treatment, or healthcare services.</p>
+      <p>Coach Uganda Journal does not provide personalized medical consultations, prescribe medications, diagnose medical conditions, or recommend that readers replace professional healthcare with information obtained from this website.</p>
+      <p>Always seek the advice of a qualified doctor, physician, pharmacist, registered dietitian, or other appropriately licensed healthcare professional regarding questions about your health, medical conditions, medications, nutrition, or treatment options.</p>
+      <p>Never disregard professional medical advice or delay seeking medical attention because of something you have read on Coach Uganda Journal.</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-dumbbell"></i></div>
+        <h2>2. Health and Wellness Information</h2>
+      </div>
+      <p>Coach Uganda Journal may publish articles relating to physical fitness, exercise, mental well-being, healthy living, personal development, sleep, nutrition, and general wellness.</p>
+      <p>Although we aim to provide accurate, useful, and responsibly researched information, individual health needs and medical circumstances vary.</p>
+      <p>Information about physical activity, wellness routines, and lifestyle changes may not be appropriate for everyone.</p>
+      <p>Before beginning a new exercise program, substantially changing your diet, or adopting a wellness routine, consult an appropriately qualified healthcare professional when you have an existing medical condition, are pregnant, are recovering from illness or surgery, take medication, or have other health concerns.</p>
+      <p>Readers are responsible for considering their personal circumstances and seeking appropriate professional guidance.</p>
+    </section>
+
+    <!-- 3 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h2>3. Traditional Medicine and Home Remedies</h2>
+      </div>
+      <p>Coach Uganda Journal may discuss traditional practices, herbal preparations, natural ingredients, and home remedies used in different cultures around the world.</p>
+      <p>These discussions are intended to provide educational, historical, and cultural information.</p>
+      <p>Natural does not necessarily mean safe, effective, or medically approved.</p>
+      <p>Traditional remedies, herbs, supplements, and natural preparations may:</p>
+      <ul>
+        <li>Cause allergic reactions or unwanted side effects.</li>
+        <li>Interact with prescription or over-the-counter medications.</li>
+        <li>Be unsuitable during pregnancy or breastfeeding.</li>
+        <li>Be unsafe for children or individuals with certain medical conditions.</li>
+        <li>Have limited or insufficient scientific evidence supporting their effectiveness.</li>
+        <li>Cause harm when used incorrectly, in excessive amounts, or in place of necessary medical treatment.</li>
+      </ul>
+      <p>The inclusion of a traditional remedy on this website does not mean that Coach Uganda Journal endorses it as a proven medical treatment.</p>
+      <p>We do not claim that any herb, food, natural ingredient, or home remedy can cure, prevent, or treat a disease unless such a claim is appropriately supported by reliable scientific evidence and permitted under applicable law.</p>
+      <p>Readers should consult a qualified healthcare professional before using herbal preparations or home remedies for medical purposes.</p>
+      <p>Home remedies should never replace prescribed medication, necessary medical treatment, or emergency healthcare.</p>
+    </section>
+
+    <!-- 4 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-apple-whole"></i></div>
+        <h2>4. Nutrition, Food, and Dietary Information</h2>
+      </div>
+      <p>Coach Uganda Journal may publish articles about foods, traditional recipes, ingredients, cultural eating habits, nutrition, and general dietary practices.</p>
+      <p>Any nutritional information is intended for general education and should not be interpreted as individualized dietary advice.</p>
+      <p>Dietary needs vary depending on age, medical history, allergies, medication use, pregnancy, activity level, and other personal factors.</p>
+      <p>Readers should consult a qualified healthcare professional or registered dietitian before making significant dietary changes, particularly when managing a medical condition.</p>
+      <p>Recipes and food-related content may include ingredients that cause allergic reactions or may be unsuitable for particular dietary requirements.</p>
+      <p>Readers are responsible for checking ingredients, food preparation methods, food safety, and their own dietary restrictions before preparing or consuming foods discussed on the website.</p>
+    </section>
+
+    <!-- 5 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-brain"></i></div>
+        <h2>5. Mental Health and Emotional Well-Being</h2>
+      </div>
+      <p>Coach Uganda Journal may publish articles relating to stress management, emotional well-being, motivation, personal growth, and healthy lifestyle habits.</p>
+      <p>Such content is intended to provide general education, encouragement, and personal perspectives.</p>
+      <p>It is not a substitute for professional mental health assessment, counseling, psychotherapy, psychiatric care, or other appropriate treatment.</p>
+      <p>If you are experiencing significant emotional distress, persistent mental health symptoms, or concerns about your safety, seek support from a qualified mental health professional or an appropriate healthcare service.</p>
+    </section>
+
+    <!-- 6 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-user-doctor"></i></div>
+        <h2>6. No Doctor–Patient Relationship</h2>
+      </div>
+      <p>Reading, accessing, commenting on, or communicating about health-related content published on Coach Uganda Journal does not establish a doctor–patient, therapist–patient, dietitian–patient, or other professional healthcare relationship.</p>
+      <p>Responses to general questions, where provided, should not be interpreted as personalized medical advice.</p>
+      <p>Coach Uganda Journal is an educational and informational publication and does not operate as a medical clinic or healthcare treatment service.</p>
+    </section>
+
+    <!-- 7 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-microscope"></i></div>
+        <h2>7. Accuracy, Research, and Medical Information</h2>
+      </div>
+      <p>Coach Uganda Journal aims to publish responsible, understandable, and useful content.</p>
+      <p>Where appropriate, health-related articles may reference scientific research, public health organizations, medical publications, and other reputable sources.</p>
+      <p>However, medical research, treatment guidelines, and public health recommendations may change over time.</p>
+      <p>We do not guarantee that every article will remain complete, current, or applicable to every individual.</p>
+      <p>Publication of an article does not mean that its content has been independently reviewed or approved by a licensed medical professional unless such review is expressly identified.</p>
+      <p>Readers are encouraged to verify important health information using trusted medical sources and qualified healthcare professionals.</p>
+      <p>We may review, correct, or update articles when new information becomes available.</p>
+    </section>
+
+    <!-- 8 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-comment-medical"></i></div>
+        <h2>8. Personal Experiences and Testimonials</h2>
+      </div>
+      <p>Some articles may include personal stories, cultural experiences, interviews, opinions, or testimonials relating to health, wellness, nutrition, and lifestyle.</p>
+      <p>These accounts reflect individual experiences and should not be treated as proof that a particular remedy, treatment, product, or lifestyle practice is safe or effective for everyone.</p>
+      <p>Individual results may differ.</p>
+      <p>Personal testimonials do not replace scientific evidence or professional medical guidance.</p>
+    </section>
+
+    <!-- 9 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <h2>9. Products, Advertising, and Sponsored Content</h2>
+      </div>
+      <p>Coach Uganda Journal may display advertisements, sponsored articles, affiliate links, product reviews, or other monetized content.</p>
+      <p>Advertising or commercial relationships do not constitute medical endorsement or verification of a product’s safety or effectiveness.</p>
+      <p>Any sponsored content or affiliate relationships will be disclosed where required by applicable law and advertising policies.</p>
+      <p>Readers should independently evaluate health-related products and consult qualified healthcare professionals before using products intended to affect their health.</p>
+      <p>Coach Uganda Journal does not guarantee the safety, quality, effectiveness, or suitability of products advertised or discussed by third parties.</p>
+    </section>
+
+    <!-- 10 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+        <h2>10. External Links and Third-Party Resources</h2>
+      </div>
+      <p>Our articles may contain links to external websites, scientific studies, educational materials, medical resources, or third-party services.</p>
+      <p>These links may be provided for additional information or reference purposes.</p>
+      <p>Coach Uganda Journal does not control the accuracy, availability, content, or privacy practices of independent third-party websites.</p>
+      <p>The inclusion of an external link does not automatically imply endorsement of all information, products, or services provided by that website.</p>
+      <p>Readers should evaluate external information independently.</p>
+    </section>
+
+    <!-- 11 · EMERGENCY -->
+    <section class="reveal emergency">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h2>11. Medical Emergencies</h2>
+      </div>
+      <div class="alert-danger">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <div>DO NOT USE COACH UGANDA JOURNAL AS A SOURCE OF EMERGENCY MEDICAL ASSISTANCE.</div>
+      </div>
+      <p>If you or someone else experiences symptoms of a medical emergency, such as severe chest pain, difficulty breathing, signs of a stroke, severe allergic reactions, uncontrolled bleeding, loss of consciousness, or another potentially life-threatening condition, seek immediate professional medical assistance.</p>
+      <p>Contact the emergency services available in your country or visit the nearest appropriate emergency healthcare facility.</p>
+      <p>Do not wait for a response from Coach Uganda Journal, and do not attempt to manage a medical emergency solely through information found on this website.</p>
+    </section>
+
+    <!-- 12 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h2>12. Use of Information and Limitation of Liability</h2>
+      </div>
+      <p>Readers use the information provided on Coach Uganda Journal at their own discretion.</p>
+      <p>To the extent permitted by applicable law, Coach Uganda and its contributors disclaim liability for losses or harm resulting from inappropriate reliance on general informational content, including the misuse of remedies, products, exercises, or dietary practices discussed on the website.</p>
+      <p>Nothing in this disclaimer excludes or limits liability that cannot lawfully be excluded or limited, including liability arising from negligence or other conduct where applicable law prohibits such exclusion.</p>
+      <p>This disclaimer does not remove our responsibility to comply with applicable consumer protection, advertising, health information, and other legal requirements.</p>
+    </section>
+
+    <!-- 13 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-rotate"></i></div>
+        <h2>13. Updates to This Disclaimer</h2>
+      </div>
+      <p>Coach Uganda Journal may update this Medical and Health Disclaimer to reflect changes in published content, scientific information, website operations, or applicable legal requirements.</p>
+      <p>Updates will be published on this page with a revised effective or last-updated date.</p>
+      <p>Visitors are encouraged to review this disclaimer periodically.</p>
+    </section>
+
+    <!-- 14 -->
+    <section class="reveal">
+      <div class="sec-head">
+        <div class="sec-icon"><i class="fa-solid fa-envelope"></i></div>
+        <h2>14. Contact Information</h2>
+      </div>
+      <p>For questions or concerns about this disclaimer or the health-related information published on Coach Uganda Journal, please contact:</p>
+      <div class="contact-box">
+        <p class="who"><i class="fa-solid fa-newspaper"></i> <span><strong>Coach Uganda Journal</strong><br>Part of Coach Uganda</span></p>
+        <p><i class="fa-solid fa-globe"></i> Website: <a href="https://www.coachuganda.com/" target="_blank" rel="noopener">https://www.coachuganda.com/</a></p>
+        <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:info@coachuganda.com">info@coachuganda.com</a></p>
+        <p><i class="fa-solid fa-location-dot"></i> Location: Kampala, Uganda</p>
+      </div>
+      <p>Please note that this contact address is not intended for medical consultations, emergency assistance, or requests for individual diagnosis or treatment.</p>
+    </section>
+
+    <div class="note reveal">⸻<br><br>©️ 2026 Coach Uganda. All Rights Reserved.</div>
+
+    <div class="end-cta reveal">
+      <h3>Your health comes first 💛</h3>
+      <p>Thank you for reading. Explore Coach Uganda Journal for educational wellness stories — and always consult a qualified professional.</p>
+      <a href="index.html" class="btn-home"><i class="fa-solid fa-house"></i> Back to Home</a>
+    </div>
+
+  </article>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-in">
+    <span>©️ 2026 Coach Uganda. All Rights Reserved.</span>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="child.html">Privacy Policy</a>
+      <a href="child.html">Child Protection</a>
+      <a href="disclaimer.html">Medical Disclaimer</a>
+    </nav>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+(function(){
+  /* ---- Scroll progress + back to top ---- */
+  var bar = document.getElementById('progress');
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    toTop.classList.toggle('show', h.scrollTop > 500);
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+  toTop.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
+
+  /* ---- Auto-build TOC ---- */
+  var toc = document.getElementById('toc');
+  var heads = Array.prototype.slice.call(document.querySelectorAll('.doc h2'));
+  heads.forEach(function(h, i){
+    if (!h.id) h.id = 'sec-' + (i + 1);
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent.trim();
+    toc.appendChild(a);
+  });
+  var links = Array.prototype.slice.call(toc.querySelectorAll('a'));
+
+  if ('IntersectionObserver' in window) {
+    /* Scroll spy */
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          links.forEach(function(l){
+            l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-110px 0px -65% 0px', threshold: 0 });
+    heads.forEach(function(h){ spy.observe(h); });
+
+    /* Reveal */
+    var rev = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          rev.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(function(el){ rev.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>

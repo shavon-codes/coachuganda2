@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clothing &amp; Essentials Needs | Coach Uganda Gives</title>
+<link rel="stylesheet" href="style.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ============ CLOTHING PAGE — SCOPED STYLES ============ */
+.cloth-page .gives-hero-content {
+  background: rgba(22,17,13,0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: clamp(30px, 5vw, 56px) clamp(22px, 5vw, 56px);
+  border-radius: 28px;
+  border: 1px solid rgba(94,234,212,0.3);
+  box-shadow: 0 30px 80px -40px rgba(0,0,0,0.8),
+              inset 0 1px 0 rgba(255,255,255,0.05);
+  max-width: 920px;
+  animation: clothFadeUp 0.9s cubic-bezier(0.25,0.8,0.25,1) both;
+}
+@keyframes clothFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cloth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: rgba(94,234,212,0.12);
+  border: 1.5px solid rgba(94,234,212,0.45);
+  color: #5EEAD4;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.cloth-badge i { color: var(--yellow); font-size: 0.9rem; }
+
+.cloth-page .gives-hero-content h1 {
+  background: linear-gradient(135deg, #FFE28F 0%, #FFC633 30%, #5EEAD4 70%, #2DD4BF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--yellow);
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+
+/* ---------- EDITORIAL INTRO ---------- */
+.cloth-intro {
+  position: relative;
+  padding: clamp(70px, 10vw, 120px) 0;
+  background: var(--charcoal-2);
+  overflow: hidden;
+}
+.cloth-intro::before,
+.cloth-intro::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: 0;
+}
+.cloth-intro::before {
+  width: 460px; height: 460px;
+  background: rgba(94,234,212,0.14);
+  top: -160px; right: -140px;
+}
+.cloth-intro::after {
+  width: 380px; height: 380px;
+  background: rgba(255,198,51,0.14);
+  bottom: -160px; left: -120px;
+}
+.cloth-intro .container { position: relative; z-index: 1; }
+
+.cloth-intro-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cloth-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #5EEAD4;
+  margin-bottom: 22px;
+}
+.cloth-kicker::before,
+.cloth-kicker::after {
+  content: '';
+  width: 40px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #5EEAD4);
+}
+.cloth-kicker::after {
+  background: linear-gradient(90deg, #5EEAD4, transparent);
+}
+
+.cloth-intro-inner h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  letter-spacing: clamp(1px, 0.5vw, 3px);
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 24px;
+  text-wrap: balance;
+}
+.cloth-intro-inner h2 .accent-teal {
+  background: linear-gradient(135deg, #5EEAD4, #2DD4BF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cloth-intro-inner p {
+  color: rgba(255,255,255,0.78);
+  font-size: clamp(0.98rem, 1.9vw, 1.08rem);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+.cloth-intro-inner p strong { color: var(--yellow); font-weight: 700; }
+
+/* ---------- PROVIDE — ALTERNATING EDITORIAL ROWS ---------- */
+.cloth-provide {
+  padding: clamp(60px, 9vw, 110px) 0;
+  background: var(--charcoal);
+  position: relative;
+  overflow: hidden;
+}
+.cloth-provide .container { position: relative; z-index: 1; }
+
+.cloth-provide-head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.cloth-provide-head h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  letter-spacing: clamp(1px, 0.4vw, 2.5px);
+  color: var(--white);
+}
+.cloth-provide-head p {
+  color: rgba(255,255,255,0.65);
+  max-width: 580px;
+  margin: 12px auto 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.cloth-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (min-width: 880px) { .cloth-rows { gap: 60px; } }
+
+.cloth-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+}
+@media (min-width: 880px) {
+  .cloth-row { grid-template-columns: 1fr 1fr; gap: 56px; }
+  .cloth-row.reverse .cloth-row-media { order: 2; }
+}
+
+.cloth-row-media {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #0f0b08;
+  border: 1.5px solid rgba(94,234,212,0.18);
+  box-shadow: 0 24px 55px -25px rgba(0,0,0,0.7);
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.cloth-row:hover .cloth-row-media {
+  transform: translateY(-4px);
+  border-color: rgba(94,234,212,0.45);
+  box-shadow: 0 30px 65px -25px rgba(94,234,212,0.22);
+}
+.cloth-row-media video,
+.cloth-row-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.cloth-row:hover .cloth-row-media video,
+.cloth-row:hover .cloth-row-media img { transform: scale(1.05); }
+
+.cloth-row-number {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  z-index: 2;
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.85);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  line-height: 1;
+}
+
+.cloth-row-content {
+  padding: 4px;
+}
+.cloth-row-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #5EEAD4;
+  margin-bottom: 14px;
+}
+.cloth-row-eyebrow i { color: var(--yellow); font-size: 0.75rem; }
+
+.cloth-row-content h3 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.6rem, 3.6vw, 2.2rem);
+  letter-spacing: 1px;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.cloth-row-content p {
+  color: rgba(255,255,255,0.75);
+  font-size: clamp(0.95rem, 1.8vw, 1.02rem);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.cloth-row-content p:last-child { margin-bottom: 0; }
+.cloth-row-content p strong { color: var(--yellow); }
+
+/* ---------- FILED UPDATES — MASONRY ---------- */
+.cloth-updates {
+  position: relative;
+  padding: clamp(70px, 10vw, 120px) 0;
+  background: var(--charcoal-2);
+  overflow: hidden;
+}
+.cloth-updates::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(94,234,212,0.12), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,198,51,0.1), transparent 42%);
+  pointer-events: none;
+}
+.cloth-updates .container { position: relative; z-index: 1; }
+
+.cloth-updates-head {
+  text-align: center;
+  margin-bottom: 44px;
+}
+.cloth-updates-head .tag { color: #5EEAD4; }
+.cloth-updates-head h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+  letter-spacing: clamp(1px, 0.5vw, 3px);
+  line-height: 1.1;
+  color: var(--white);
+  margin-top: 10px;
+  text-wrap: balance;
+}
+.cloth-updates-head p {
+  color: rgba(255,255,255,0.68);
+  max-width: 620px;
+  margin: 14px auto 0;
+  font-size: clamp(0.95rem, 1.9vw, 1.05rem);
+  line-height: 1.7;
+}
+
+.cloth-masonry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+@media (min-width: 720px) {
+  .cloth-masonry {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 200px;
+    gap: 22px;
+  }
+  .cloth-tile.tall  { grid-row: span 2; grid-column: span 3; }
+  .cloth-tile.wide  { grid-row: span 1; grid-column: span 3; }
+  .cloth-tile.small { grid-row: span 1; grid-column: span 2; }
+  .cloth-tile.big   { grid-row: span 2; grid-column: span 3; }
+}
+
+.cloth-tile {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0f0b08;
+  border: 1.5px solid rgba(94,234,212,0.16);
+  box-shadow: 0 18px 45px -22px rgba(0,0,0,0.7);
+  min-height: 220px;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.cloth-tile:hover {
+  transform: translateY(-4px);
+  border-color: rgba(94,234,212,0.5);
+  box-shadow: 0 26px 55px -25px rgba(94,234,212,0.25);
+}
+.cloth-tile video {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.cloth-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(22,17,13,0.9) 0%, rgba(22,17,13,0.25) 45%, transparent 75%);
+  pointer-events: none;
+}
+.cloth-tile-info {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 16px;
+  z-index: 2;
+}
+.cloth-tile-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 50px;
+  background: rgba(94,234,212,0.85);
+  color: var(--charcoal);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.cloth-tile-info h3 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+  letter-spacing: 0.8px;
+  color: var(--white);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.cloth-tile-info p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin-top: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- REELS (VERTICAL 9:16) ---------- */
+.cloth-reels {
+  padding: clamp(60px, 9vw, 100px) 0;
+  background: var(--charcoal);
+  position: relative;
+  overflow: hidden;
+}
+.cloth-reels .container { position: relative; z-index: 1; }
+
+.cloth-reels-head {
+  margin-bottom: 36px;
+  text-align: center;
+}
+.cloth-reels-head h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  letter-spacing: clamp(1px, 0.4vw, 2.5px);
+  color: var(--white);
+  margin-top: 8px;
+}
+.cloth-reels-head p {
+  color: rgba(255,255,255,0.65);
+  max-width: 560px;
+  margin: 12px auto 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.cloth-reels-track {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 6px 4px 24px;
+  scrollbar-width: thin;
+  scrollbar-color: #5EEAD4 transparent;
+}
+.cloth-reels-track::-webkit-scrollbar { height: 8px; }
+.cloth-reels-track::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 4px; }
+.cloth-reels-track::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #5EEAD4, #2DD4BF);
+  border-radius: 4px;
+}
+
+.cloth-reel {
+  flex: 0 0 auto;
+  width: 240px;
+  aspect-ratio: 9 / 16;
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #0f0b08;
+  border: 1.5px solid rgba(94,234,212,0.22);
+  box-shadow: 0 22px 50px -22px rgba(0,0,0,0.75);
+  scroll-snap-align: start;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+@media (max-width: 520px) { .cloth-reel { width: 200px; } }
+.cloth-reel:hover {
+  transform: translateY(-4px);
+  border-color: rgba(94,234,212,0.55);
+}
+.cloth-reel video {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.cloth-reel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(22,17,13,0.92) 0%, rgba(22,17,13,0.1) 40%, transparent 70%);
+  pointer-events: none;
+}
+.cloth-reel-info {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+}
+.cloth-reel-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 50px;
+  background: rgba(94,234,212,0.9);
+  color: var(--charcoal);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.cloth-reel-info p {
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+/* ---------- BACK LINK (in intro) ---------- */
+.cloth-back-wrap {
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* ---------- SMALL SCREENS ---------- */
+@media (max-width: 560px) {
+  .cloth-row-number { font-size: 1.6rem; top: 12px; left: 14px; }
+  .cloth-tile-info h3 { font-size: 1rem; }
+  .cloth-tile-info p { font-size: 0.78rem; }
+  .cloth-row-media { aspect-ratio: 16 / 11; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cloth-page .gives-hero-content { animation: none; }
+}
+
+<!-- ============================================================
+     ADDED STYLES (Cinematic Full-Cover Videos + Social Footer)
+     ============================================================ -->
+<style>
+/* ---------- 1. Immersive Full-Screen Hero with Cinematic Videos ---------- */
+.gives-hero { 
+  position: relative; 
+  overflow: hidden; 
+  min-height: 100vh; /* Covers the whole page screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050505;
+}
+
+/* The two videos cover the entire page (top half & bottom half) */
+.gives-hero video.gives-hero-video {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Each covers exactly half the screen */
+  object-fit: cover;
+  z-index: 1;
+}
+.gives-hero video.gives-hero-video:nth-of-type(1) { 
+  top: 0; 
+  animation: cinematicZoomTop 25s infinite alternate linear;
+}
+.gives-hero video.gives-hero-video:nth-of-type(2) { 
+  top: 50%; 
+  animation: cinematicZoomBottom 25s infinite alternate linear;
+}
+
+/* Attractive Glowing Gold Gap/Divider in the middle */
+.video-seam {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, transparent 0%, #f7c948 50%, transparent 100%);
+  box-shadow: 0 0 20px 3px rgba(247, 201, 72, 0.6);
+  z-index: 3;
+  animation: pulseGlow 3s infinite alternate;
+}
+
+/* Rich dark overlay to make the text beautifully readable */
+.gives-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%);
+  z-index: 2;
+}
+
+.gives-hero-content {
+  position: relative;
+  z-index: 4;
+  padding: 120px 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cinematic Animations */
+@keyframes cinematicZoomTop {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+@keyframes cinematicZoomBottom {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); } 
+}
+@keyframes pulseGlow {
+  0% { opacity: 0.7; box-shadow: 0 0 10px 2px rgba(247, 201, 72, 0.4); }
+  100% { opacity: 1; box-shadow: 0 0 30px 6px rgba(247, 201, 72, 0.8); }
+}
+
+/* Small screens adjustments */
+@media (max-width: 640px) {
+  .gives-hero-content {
+    padding: 80px 15px;
+  }
+}
+
+/* ---------- 2. Social media + policies footer ---------- */
+.cu-footer {
+  position: relative;
+  background: linear-gradient(180deg, #0b0b0f 0%, #14141b 100%);
+  color: #e9e9ef;
+  text-align: center;
+  padding: 50px 20px 34px;
+  border-top: 1px solid rgba(247, 201, 72, 0.25);
+  overflow: hidden;
+}
+.cu-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, transparent, #f7c948, transparent);
+}
+.cu-footer-inner { max-width: 1100px; margin: 0 auto; }
+
+.cu-follow-label {
+  font-family: 'Bebas Neue', 'Poppins', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #f7c948;
+  margin: 0 0 20px;
+}
+
+.cu-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.cu-social {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  -webkit-tap-highlight-color: transparent;
+}
+.cu-social:hover,
+.cu-social:focus-visible {
+  transform: translateY(-5px) scale(1.07);
+  outline: none;
+}
+
+/* Brand colours */
+.cu-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.cu-instagram:hover { box-shadow: 0 10px 24px rgba(214, 36, 159, 0.5); }
+
+.cu-snapchat {
+  background: #FFFC00;
+  color: #111;
+}
+.cu-snapchat:hover { box-shadow: 0 10px 24px rgba(255, 252, 0, 0.35); }
+
+.cu-facebook { background: #1877F2; }
+.cu-facebook:hover { box-shadow: 0 10px 24px rgba(24, 119, 242, 0.5); }
+
+.cu-youtube { background: #FF0000; }
+.cu-youtube:hover { box-shadow: 0 10px 24px rgba(255, 0, 0, 0.45); }
+
+.cu-tiktok { background: #010101; }
+.cu-tiktok:hover {
+  box-shadow: -3px -3px 0 rgba(37, 244, 238, 0.75),
+               3px  3px 0 rgba(254, 44, 85, 0.75),
+               0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Policy links */
+.cu-policies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 16px;
+}
+.cu-policies a {
+  color: #cfcfd8;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  padding: 4px 2px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.cu-policies a:hover,
+.cu-policies a:focus-visible {
+  color: #f7c948;
+  border-bottom-color: #f7c948;
+  outline: none;
+}
+.cu-dot { color: #f7c948; opacity: 0.7; }
+
+.cu-copy {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #8a8a96;
+  letter-spacing: 0.3px;
+}
+
+/* Small screens for footer */
+@media (max-width: 480px) {
+  .cu-footer { padding: 40px 16px 95px; }
+  .cu-socials { gap: 11px; margin-bottom: 24px; }
+  .cu-social { width: 42px; height: 42px; font-size: 1.05rem; }
+  .cu-policies { flex-direction: column; gap: 10px; }
+  .cu-dot { display: none; }
+  .cu-follow-label { letter-spacing: 4px; }
+}
+
+
+</style>
+</head>
+<body class="gives-page cloth-page">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar scrolled">
+  <div class="nav-container">
+    <a href="index.html" class="logo" aria-label="Coach Uganda home">
+      <span class="logo-badge">
+        <span class="logo-c">C</span><span class="logo-dot">·</span><span class="logo-u">U</span>
+      </span>
+      <small>Coach Uganda</small>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+      <li><a href="give.html" class="nav-link active" data-i18n="nav.gives">Gives ❤️</a></li>
+      <li><a href="journal.html" class="nav-link" data-i18n="nav.journal">Journal</a></li>
+    </ul>
+
+    <div class="lang-wrap">
+      <button type="button" class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+        <i class="fa-solid fa-globe"></i> <span id="langCurrent">EN</span>
+        <i class="fa-solid fa-chevron-down lang-caret"></i>
+      </button>
+      <ul class="lang-menu" id="langMenu" role="menu">
+        <li role="none"><button data-lang="en" role="menuitem">🇬🇧 English</button></li>
+        <li role="none"><button data-lang="fr" role="menuitem">🇫🇷 Français</button></li>
+        <li role="none"><button data-lang="de" role="menuitem">🇩🇪 Deutsch</button></li>
+        <li role="none"><button data-lang="es" role="menuitem">🇪🇸 Español</button></li>
+        <li role="none"><button data-lang="it" role="menuitem">🇮🇹 Italiano</button></li>
+        <li role="none"><button data-lang="ar" role="menuitem">🇸🇦 العربية</button></li>
+      </ul>
+    </div>
+    <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+  </div>
+</nav>
+
+<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+<a href="https://wa.me/491771726078" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span class="whatsapp-pulse"></span>
+</a>
+
+<!-- ===== HERO ===== -->
+<section class="gives-hero">
+  <video class="gives-hero-video" autoplay muted loop playsinline>
+    <source src="images/" type="video/mp4">
+  </video>
+  <div class="gives-hero-overlay"></div>
+  <div class="gives-hero-content">
+    <span class="cloth-badge" data-i18n="give.hero.title">
+      <i class="fa-solid fa-shirt"></i> Coach Uganda Gives
+    </span>
+    <h1 data-i18n="give.clothing.title">Clothing and Essentials Needs</h1>
+    <p class="gives-hero-lead" data-i18n="give.clothing.desc">
+      Providing children and families with clothing, shoes, and other everyday essentials that bring comfort, dignity, and practical support when they need it most.
+    </p>
+  </div>
+</section>
+
+<!-- ===== EDITORIAL INTRO ===== -->
+<section class="cloth-intro">
+  <div class="container">
+    <div class="cloth-intro-inner">
+      <span class="cloth-kicker" data-i18n="cloth.kicker">DIGNITY &amp; COMFORT</span>
+      <h2>
+        <span data-i18n="cloth.title1">Clothing is more than</span>
+        <span class="accent-teal" data-i18n="cloth.title2">fabric</span>
+        <span data-i18n="cloth.title3">— it's dignity.</span>
+      </h2>
+      <p data-i18n="cloth.intro.p1">
+        A clean shirt. A pair of shoes that fit. A warm blanket on a cold night. These are small things — but for a child or a family in a difficult season, they mean the world.
+      </p>
+      <p data-i18n="cloth.intro.p2">
+        Through Coach Uganda Gives, <strong>I personally deliver clothing and everyday essentials</strong> to people who need them most. No big organisation behind it — just a personal commitment to care in practical ways.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROVIDE — EDITORIAL ROWS ===== -->
+<section class="cloth-provide">
+  <div class="container">
+    <div class="cloth-provide-head">
+      <h2 data-i18n="cloth.provide.title">What We Provide</h2>
+      <p data-i18n="cloth.provide.sub">
+        Simple essentials, delivered with care — from the basics to the small things that make daily life a little easier.
+      </p>
+    </div>
+
+    <div class="cloth-rows">
+
+      <!-- ROW 1 -->
+      <article class="cloth-row">
+        <div class="cloth-row-media">
+          <span class="cloth-row-number">01</span>
+          <video autoplay muted loop playsinline>
+            <source src="images/g3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="cloth-row-content">
+          <span class="cloth-row-eyebrow"><i class="fa-solid fa-shirt"></i> <span data-i18n="cloth.row1.eyebrow">Clothing</span></span>
+          <h3 data-i18n="cloth.row1.title">Clothes That Fit and Feel Right</h3>
+          <p data-i18n="cloth.row1.p1">
+            Shirts, trousers, dresses, and jackets — clean, comfortable clothing for children and adults, matched to their real needs.
+          </p>
+          <p data-i18n="cloth.row1.p2">
+            <strong>Every piece is chosen with care</strong>, because the right clothing can restore confidence and bring comfort.
+          </p>
+        </div>
+      </article>
+
+      <!-- ROW 2 (reversed) -->
+      <article class="cloth-row reverse">
+        <div class="cloth-row-media">
+          <span class="cloth-row-number">02</span>
+          <video autoplay muted loop playsinline>
+            <source src="images/shoes1.MOV" type="video/mp4">
+          </video>
+        </div>
+        <div class="cloth-row-content">
+          <span class="cloth-row-eyebrow"><i class="fa-solid fa-shoe-prints"></i> <span data-i18n="cloth.row2.eyebrow">Footwear</span></span>
+          <h3 data-i18n="cloth.row2.title">Shoes That Carry Them Forward</h3>
+          <p data-i18n="cloth.row2.p1">
+            A sturdy pair of shoes means a child can walk to school, play without fear, and hold their head a little higher.
+          </p>
+          <p data-i18n="cloth.row2.p2">
+            <strong>Fit and comfort matter</strong> — because something as simple as the right shoes changes how a day feels.
+          </p>
+        </div>
+      </article>
+
+      <!-- ROW 3 -->
+      <article class="cloth-row">
+        <div class="cloth-row-media">
+          <span class="cloth-row-number">03</span>
+          <video autoplay muted loop playsinline>
+            <source src="images/blanket.MOV" type="video/mp4">
+          </video>
+        </div>
+        <div class="cloth-row-content">
+          <span class="cloth-row-eyebrow"><i class="fa-solid fa-bag-shopping"></i> <span data-i18n="cloth.row3.eyebrow">Everyday Essentials</span></span>
+          <h3 data-i18n="cloth.row3.title">Bags, Blankets &amp; Small Comforts</h3>
+          <p data-i18n="cloth.row3.p1">
+            Backpacks for school, blankets for warmth, towels, and other daily essentials — the quiet things that make a real difference.
+          </p>
+          <p data-i18n="cloth.row3.p2">
+            <strong>It's not just the items.</strong> It's the message behind them: someone cared enough to show up.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FILED UPDATES — MASONRY ===== -->
+<section class="cloth-updates">
+  <div class="container">
+    <div class="cloth-updates-head">
+      <span class="tag" data-i18n="cloth.updates.tag">FROM THE FIELD</span>
+      <h2><span data-i18n="cloth.updates.title1">Filed</span> <span class="accent" data-i18n="cloth.updates.title2">Updates</span></h2>
+      <p data-i18n="cloth.updates.sub">
+        Recent deliveries, quiet moments, and stories from the ground.
+      </p>
+    </div>
+
+    <div class="cloth-masonry">
+
+      <article class="cloth-tile tall">
+        <video autoplay muted loop playsinline>
+          <source src="images/clothes2.MOV" type="video/mp4">
+        </video>
+        <div class="cloth-tile-info">
+          <span class="cloth-tile-date"><i class="fa-solid fa-circle"></i> Oct 18, 2026</span>
+          <h3 data-i18n="cloth.up.1.title">Clothing Delivered to Children</h3>
+          <p data-i18n="cloth.up.1.text">New outfits and school clothes brought smiles to a group of children preparing for the new term.</p>
+        </div>
+      </article>
+
+      <article class="cloth-tile wide">
+        <video autoplay muted loop playsinline>
+          <source src="images/shoes2.MOV" type="video/mp4">
+        </video>
+        <div class="cloth-tile-info">
+          <span class="cloth-tile-date"><i class="fa-solid fa-circle"></i> Oct 10, 2026</span>
+          <h3 data-i18n="cloth.up.2.title">Shoes for the Walk to School</h3>
+          <p data-i18n="cloth.up.2.text">Sturdy footwear means the journey to class is a little easier.</p>
+        </div>
+      </article>
+
+      <article class="cloth-tile small">
+        <video autoplay muted loop playsinline>
+          <source src="images/blanket.MOV" type="video/mp4">
+        </video>
+        <div class="cloth-tile-info">
+          <span class="cloth-tile-date"><i class="fa-solid fa-circle"></i> Oct 4, 2026</span>
+          <h3 data-i18n="cloth.up.3.title">Blankets for Cooler Nights</h3>
+          <p data-i18n="cloth.up.3.text">Small warmth, big comfort.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== SUPPORT SECTION ===== -->
+<section class="gives-support">
+  <video class="gives-support-video" autoplay muted loop playsinline>
+    <source src="images/Found3.MP4" type="video/mp4">
+  </video>
+  <div class="gives-support-overlay"></div>
+  <div class="container">
+    <div class="support-content-box">
+      <h2 class="gives-title" data-i18n="give.support.title">Support Coach Uganda Work</h2>
+      <p class="gives-text" style="margin-bottom: 30px;" data-i18n="give.support.desc">
+        Through Coach Uganda Gives, I continue supporting children and other practical Community needs. If you believe in this work, you are welcome to make a voluntary contribution. No act of kindness is too small to make a difference.
+      </p>
+      <div class="support-payment">
+        <a href="https://www.paypal.me/WaiswaSulaiman289" target="_blank" rel="noopener" class="pay-card pay-paypal">
+          <span class="pay-logo"><i class="fa-brands fa-paypal"></i></span>
+          <span class="pay-label">PayPal</span>
+        </a>
+        <button type="button" class="pay-card pay-airtel" data-method="airtel">
+          <span class="pay-logo pay-logo-airtel">airtel</span>
+          <span class="pay-label">Airtel Money</span>
+        </button>
+        <button type="button" class="pay-card pay-mtn" data-method="mtn">
+          <span class="pay-logo pay-logo-mtn">MTN</span>
+          <span class="pay-label">MTN Money</span>
+        </button>
+      </div>
+      <p class="voluntary-note" data-i18n="give.voluntary">All contributions are voluntary</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAY CONNECTED ===== -->
+<section class="gives-stay">
+  <div class="container">
+    <h2 class="gives-title" data-i18n="stay.title">Stay Connected</h2>
+    <p class="gives-text" data-i18n="stay.sub">
+      Join the Coach Uganda newsletter and follow the journey of hope, kindness, and positive change.
+    </p>
+    <form class="stay-form" id="stayForm" novalidate>
+      <input type="email" id="stayEmail" name="email" placeholder="Your personal email address" required aria-label="Your email address" data-i18n="stay.placeholder">
+      <button type="submit" id="stayBtn">
+        <span class="btn-label" data-i18n="stay.btn">Subscribe</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+      <p class="form-message" id="stayMessage" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== DONATION MODAL ===== -->
+<div class="donate-modal" id="donateModal" role="dialog" aria-modal="true" aria-labelledby="donateTitle">
+  <div class="donate-modal-inner">
+    <button type="button" class="modal-x" id="closeDonate" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+
+    <div class="donate-step" id="donateFormStep">
+      <div class="donate-head">
+        <div class="donate-logo airtel-logo" id="donateLogo">
+          <span class="logo-brand-text" id="donateLogoText">airtel</span>
+        </div>
+        <div>
+          <h3 id="donateTitle" data-i18n="modal.donate.title">Donate with Airtel Money</h3>
+          <p class="donate-sub" data-i18n="modal.donate.sub">Fill in your details and we'll generate a USSD code for your phone.</p>
+        </div>
+      </div>
+
+      <form id="donationForm">
+        <div class="field">
+          <label for="donName" data-i18n="modal.name">Your Name</label>
+          <input type="text" id="donName" name="name" required placeholder="e.g. Sarah N.">
+        </div>
+        <div class="field">
+          <label for="donAmount" data-i18n="modal.amount">Amount (UGX)</label>
+          <input type="number" id="donAmount" name="amount" min="1000" step="500" required placeholder="10000">
+          <div class="quick-chips">
+            <button type="button" data-amt="5000">5,000</button>
+            <button type="button" data-amt="10000">10,000</button>
+            <button type="button" data-amt="20000">20,000</button>
+            <button type="button" data-amt="50000">50,000</button>
+            <button type="button" data-amt="100000">100,000</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="donReason" data-i18n="modal.reason">Reason for donation</label>
+          <textarea id="donReason" name="reason" rows="2" required placeholder="School fees, food support, general giving…"></textarea>
+        </div>
+        <div class="field">
+          <label for="donPhone" data-i18n="modal.phone">Your phone number (sending from)</label>
+          <input type="tel" id="donPhone" name="phone" required placeholder="+256 7XX XXX XXX">
+        </div>
+        <button type="submit" class="btn-primary donate-submit">
+          <span data-i18n="modal.continue">Continue</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="donate-step" id="donateResultStep" hidden>
+      <div class="donate-head">
+        <div class="donate-logo success-logo"><i class="fa-solid fa-check"></i></div>
+        <div>
+          <h3 data-i18n="modal.almost">Almost there!</h3>
+          <p class="donate-sub" data-i18n="modal.almost.sub">Dial this code on your phone to complete your donation.</p>
+        </div>
+      </div>
+      <div class="ussd-box">
+        <div class="ussd-label" data-i18n="modal.ussd">USSD code</div>
+        <div class="ussd-code" id="ussdCode">*185*1*1*256759862493*10000#</div>
+        <div class="ussd-actions">
+          <button type="button" class="copy-btn" id="copyUssd">
+            <i class="fa-regular fa-copy"></i> <span data-i18n="modal.copy">Copy</span>
+          </button>
+          <a href="#" class="copy-btn dial-btn" id="dialBtn">
+            <i class="fa-solid fa-phone"></i> <span data-i18n="modal.dial">Open Dialer</span>
+          </a>
+        </div>
+      </div>
+      <div class="donate-summary" id="donateSummary"></div>
+      <button type="button" class="btn-ghost-full" id="backToDonate">
+        <i class="fa-solid fa-arrow-left"></i> <span data-i18n="modal.back">Make another donation</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SOCIAL MEDIA + POLICY FOOTER
+     ============================================================ -->
+<footer class="cu-footer">
+  <div class="cu-footer-inner">
+
+    <p class="cu-follow-label">Follow The Journey</p>
+
+    <div class="cu-socials">
+      <!-- ↓↓↓ Replace the href values with your own profile links ↓↓↓ -->
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="cu-social cu-instagram" aria-label="Follow on Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.snapchat.com/" target="_blank" rel="noopener" class="cu-social cu-snapchat" aria-label="Follow on Snapchat">
+        <i class="fa-brands fa-snapchat"></i>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="cu-social cu-facebook" aria-label="Follow on Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="cu-social cu-youtube" aria-label="Subscribe on YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="cu-social cu-tiktok" aria-label="Follow on TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+    </div>
+
+    <nav class="cu-policies" aria-label="Policies">
+      <!-- ↓↓↓ Replace with the file names of your existing policy pages ↓↓↓ -->
+      <a href="child.html" class="legal-link"><i class="fa-solid fa-shield-halved"></i> Privacy</a>
+      <span class="cu-dot" aria-hidden="true">•</span>
+      <a href="child.html" class="legal-link"><i class="fa-solid fa-child-reaching"></i> Child Protection</a>
+    </nav>
+
+    <p class="cu-copy">© <span id="cuYear">2025</span> Coach Uganda Gives. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>document.getElementById('cuYear').textContent = new Date().getFullYear();</script>
+
+
+
+<script src="scripts.js?v=6"></script>
+</body>
+</html>

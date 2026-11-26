@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Updates & Stories | Coach Uganda</title>
+<link rel="stylesheet" href="style.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="gives-page">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar scrolled">
+  <div class="nav-container">
+    <a href="index.html" class="logo" aria-label="Coach Uganda home">
+      <span class="logo-badge">
+        <span class="logo-c">C</span><span class="logo-dot">·</span><span class="logo-u">U</span>
+      </span>
+      <small>Coach Uganda</small>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+      <li><a href="give.html" class="nav-link" data-i18n="nav.gives">Gives ❤️</a></li>
+      <li><a href="updates.html" class="nav-link active" data-i18n="nav.updates">Updates</a></li>
+      <li><a href="journal.html" class="nav-link" data-i18n="nav.journal">Journal</a></li>
+    </ul>
+    <!-- Language selector -->
+    <div class="lang-wrap">
+      <button type="button" class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+        <i class="fa-solid fa-globe"></i> <span id="langCurrent">EN</span>
+        <i class="fa-solid fa-chevron-down lang-caret"></i>
+      </button>
+      <ul class="lang-menu" id="langMenu" role="menu">
+        <li role="none"><button data-lang="en" role="menuitem">🇬🇧 English</button></li>
+        <li role="none"><button data-lang="fr" role="menuitem">🇫🇷 Français</button></li>
+        <li role="none"><button data-lang="de" role="menuitem">🇩🇪 Deutsch</button></li>
+        <li role="none"><button data-lang="es" role="menuitem">🇪🇸 Español</button></li>
+        <li role="none"><button data-lang="it" role="menuitem">🇮🇹 Italiano</button></li>
+        <li role="none"><button data-lang="ar" role="menuitem">🇸🇦 العربية</button></li>
+      </ul>
+    </div>
+    <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="gives-hero" style="min-height: 40vh; padding-top: 150px; padding-bottom: 50px;">
+  <div class="gives-hero-overlay" style="background: radial-gradient(circle, rgba(255,198,51,0.15) 0%, rgba(22,17,13,0.95) 80%);"></div>
+  <div class="gives-hero-content">
+    <h1 data-i18n="updates.hero.title">Updates & Stories</h1>
+    <p class="gives-hero-lead" data-i18n="updates.hero.sub">
+      See the real impact of your kindness. Below are the latest updates, photos, and videos from the field.
+    </p>
+  </div>
+</section>
+
+<!-- ===== SECTOR FILTER CHIPS ===== -->
+<div class="sector-filter-wrap">
+  <div class="sector-filter">
+    <button class="chip active" data-filter="all">✦ All Updates</button>
+    <button class="chip" data-filter="food"><i class="fa-solid fa-bowl-food"></i> Food & Family</button>
+    <button class="chip" data-filter="education"><i class="fa-solid fa-graduation-cap"></i> Education</button>
+    <button class="chip" data-filter="clothing"><i class="fa-solid fa-shirt"></i> Clothing</button>
+    <button class="chip" data-filter="housing"><i class="fa-solid fa-house"></i> Housing</button>
+    <button class="chip" data-filter="community"><i class="fa-solid fa-people-group"></i> Community</button>
+    <button class="chip" data-filter="stories"><i class="fa-solid fa-book-open"></i> Stories</button>
+  </div>
+</div>
+
+<!-- ===== UPDATE POSTS (TRENDING BENTO GRID WITH VIDEO BACKGROUNDS) ===== -->
+<section class="gives-block alt updates-section">
+  <div class="gradient-mesh" aria-hidden="true"></div>
+  <div class="container">
+    <div class="bento-grid">
+
+      <!-- POST 1: FOOD & FAMILY SUPPORT -->
+      <article class="update-card reveal-up" data-sector="food">
+        <div class="update-media video-media">
+          <video autoplay loop muted playsinline>
+            <source src="images/Found3.MP4" type="video/mp4">
+          </video>
+          <div class="video-overlay"></div>
+          <span class="media-tag"><i class="fa-solid fa-bowl-food"></i> Food & Family</span>
+        </div>
+        <div class="update-text">
+          <div class="meta-row">
+            <span class="pill"><span class="pulse-dot"></span> Oct 20, 2026</span>
+            <span class="pill ghost">Food & Family</span>
+          </div>
+          <h3>Support Coach Ugandan’s Work</h3>
+          <p>A small act of kindness can bring hope to someone facing a difficult time.</p>
+          <p>Through my personal efforts, I support children and families with food, essential supplies, care and encouragement whenever possible.</p>
+          <p>Coach Ugandan is not an NGO or organization—it is my personal commitment to helping people in need.</p>
+          <p>Your support can help me reach more lives and turn compassion into meaningful action.</p>
+        </div>
+      </article>
+
+      <!-- POST 2: EDUCATION & SCHOOL SUPPORT -->
+      <article class="update-card reveal-up" data-sector="education">
+        <div class="update-media video-media">
+          <video autoplay loop muted playsinline>
+            <source src="images/found.MP4" type="video/mp4">
+          </video>
+          <div class="video-overlay"></div>
+          <span class="media-tag"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+        </div>
+        <div class="update-text">
+          <div class="meta-row">
+            <span class="pill"><span class="pulse-dot"></span> Oct 15, 2026</span>
+            <span class="pill ghost">Education</span>
+          </div>
+          <h3>Support Coach Ugandan’s Work</h3>
+          <p>Your support can change a life.</p>
+          <p>Through my personal efforts, I help children and people facing difficult circumstances with education and basic needs.</p>
+          <p>I cannot do it alone. Your contribution, no matter the size, can help me reach someone who needs support and hope.</p>
+          <p>This is a personal initiative, not an NGO or organization.</p>
+          <p>Join me in turning kindness into meaningful change.</p>
+        </div>
+      </article>
+
+      <!-- POST 3: CLOTHING & ESSENTIAL NEEDS -->
+      <article class="update-card reveal-up" data-sector="clothing">
+        <div class="update-media video-media">
+          <video autoplay loop muted playsinline>
+            <source src="images/FOUND2.MP4" type="video/mp4">
+          </video>
+          <div class="video-overlay"></div>
+          <span class="media-tag"><i class="fa-solid fa-shirt"></i> Clothing</span>
+        </div>
+        <div class="update-text">
+          <div class="meta-row">
+            <span class="pill"><span class="pulse-dot"></span> Oct 10, 2026</span>
+            <span class="pill ghost">Clothing</span>
+          </div>
+          <h3>Support Coach Ugandan’ Work</h3>
+          <p>I personally support children and families facing difficult times with food, clothing, school supplies, and other essential needs. This is not an NGO or organization—it is a personal mission inspired by compassion.</p>
+          <p>You can help by contributing toward essential needs, donating useful items, or sharing this work with others. Every act of kindness, no matter how small, can bring hope and a smile to someone in need.</p>
+        </div>
+      </article>
+
+      <!-- POST 4: HOUSING & HOME SUPPORT -->
+      <article class="update-card reveal-up" data-sector="housing">
+        <div class="update-media video-media">
+          <video autoplay loop muted playsinline>
+            <source src="images/FOUND2.MP4" type="video/mp4">
+          </video>
+          <div class="video-overlay"></div>
+          <span class="media-tag"><i class="fa-solid fa-house"></i> Housing</span>
+        </div>
+        <div class="update-text">
+          <div class="meta-row">
+            <span class="pill"><span class="pulse-dot"></span> Oct 5, 2026</span>
+            <span class="pill ghost">Housing</span>
+          </div>
+          <h3>Support Coach Ugandan’s Work</h3>
+          <p>Through my personal work as Coach Ugandan, I help families facing difficult circumstances with beds, mattresses, bedsheets, blankets, and other household essentials.</p>
+          <p>Support received helps provide these items and cover related costs of reaching those in need. If this work touches your heart, you are warmly welcome to support in any way you can.</p>
+          <p>Coach Ugandan is a personal initiative, not an NGO or registered charity.</p>
+        </div>
+      </article>
+
+      <!-- POST 5: COMMUNITY PROJECTS -->
+      <article class="update-card reveal-up" data-sector="community">
+        <div class="update-media video-media">
+          <video autoplay loop muted playsinline>
+            <source src="images/FOUND2.MP4" type="video/mp4">
+          </video>
+          <div class="video-overlay"></div>
+          <span class="media-tag"><i class="fa-solid fa-people-group"></i> Community</span>
+        </div>
+        <div class="update-text">
+          <div class="meta-row">
+            <span class="pill"><span class="pulse-dot"></span> Sept 28, 2026</span>
+            <span class="pill ghost">Community</span>
+          </div>
+          <h3>Support Coach Ugandan’s Work</h3>
+          <p>Every family deserves access to basic necessities like clean water. Through my personal community work, I support practical projects that can improve everyday living conditions and bring hope to communities.</p>
+          <p>Together, we can turn kindness into meaningful change.</p>
+          <p>Coach Ugandan is a personal initiative, not an NGO or registered charity.</p>
+        </div>
+      </article>
+
+      <!-- POST 6: COMMUNITY STORIES AND UPDATES -->
+      <article class="update-card reveal-up" data-sector="stories">
+        <div class="update-media video-media">
+          <video autoplay loop muted playsinline>
+            <source src="images/found.MP4" type="video/mp4">
+          </video>
+          <div class="video-overlay"></div>
+          <span class="media-tag"><i class="fa-solid fa-book-open"></i> Stories</span>
+        </div>
+        <div class="update-text">
+          <div class="meta-row">
+            <span class="pill"><span class="pulse-dot"></span> Sept 20, 2026</span>
+            <span class="pill ghost">Stories</span>
+          </div>
+          <h3>Support Coach Ugandan’s Work</h3>
+          <p>Through Coach Uganda Gives, I personally bring encouragement and practical support to people facing everyday challenges.</p>
+          <p>Your kindness can help this work go further. Support the journey by sharing these stories, contributing resources, or making a voluntary contribution toward future community activities.</p>
+          <p>Don’t just read the story—help create the next one. Together, we can turn compassion into meaningful action.</p>
+          <p>Coach Uganda Gives is a personal initiative, not a registered NGO or charity.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAYMENT OPTIONS ===== -->
+<section class="gives-support">
+  <div class="gives-support-overlay" style="background: rgba(22,17,13, 0.95);"></div>
+  <div class="container">
+    <div class="support-content-box">
+      <h2 class="gives-title" data-i18n="give.support.title">Support This Work</h2>
+      <p class="gives-text" style="margin-bottom: 30px;" data-i18n="give.support.desc">
+        If these updates inspire you, you can make a voluntary contribution below to keep the mission going.
+      </p>
+
+      <div class="support-payment">
+        <a href="https://www.paypal.me/WaiswaSulaiman289" target="_blank" rel="noopener" class="pay-card pay-paypal">
+          <span class="pay-logo"><i class="fa-brands fa-paypal"></i></span>
+          <span>PayPal</span>
+        </a>
+        <button type="button" class="pay-card pay-airtel" data-method="airtel">
+          <span class="pay-logo pay-logo-airtel">airtel</span>
+          <span>Airtel Money</span>
+        </button>
+        <button type="button" class="pay-card pay-mtn" data-method="mtn">
+          <span class="pay-logo pay-logo-mtn">MTN</span>
+          <span>MTN Money</span>
+        </button>
+      </div>
+
+      <p class="voluntary-note" data-i18n="give.voluntary">All contributions are voluntary</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAY CONNECTED ===== -->
+<section class="gives-stay">
+  <div class="container">
+    <h2 class="gives-title" data-i18n="stay.title">Stay Connected</h2>
+    <p class="gives-text" style="margin-bottom: 30px;" data-i18n="stay.sub">
+      Don't miss the next update. Subscribe with your personal email to receive our newsletter directly in your inbox.
+    </p>
+    <form class="stay-form" id="stayForm" novalidate>
+      <input type="email" id="stayEmail" name="email" placeholder="Your personal email address" required aria-label="Your email address" data-i18n="stay.placeholder">
+      <button type="submit" id="stayBtn">
+        <span class="btn-label" data-i18n="stay.btn">Subscribe</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+      <p class="form-message" id="stayMessage" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== DONATION MODAL ===== -->
+<div class="donate-modal" id="donateModal" role="dialog" aria-modal="true" aria-labelledby="donateTitle">
+  <div class="donate-modal-inner">
+    <button type="button" class="modal-x" id="closeDonate" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+
+    <div class="donate-step" id="donateFormStep">
+      <div class="donate-head">
+        <div class="donate-logo airtel-logo" id="donateLogo">
+          <span class="logo-brand-text" id="donateLogoText">airtel</span>
+        </div>
+        <div>
+          <h3 id="donateTitle" data-i18n="modal.donate.title">Donate with Airtel Money</h3>
+          <p class="donate-sub" data-i18n="modal.donate.sub">Fill in your details and we'll generate a USSD code for your phone.</p>
+        </div>
+      </div>
+
+      <form id="donationForm">
+        <div class="field">
+          <label for="donName" data-i18n="modal.name">Your Name</label>
+          <input type="text" id="donName" name="name" required placeholder="e.g. Sarah N.">
+        </div>
+        <div class="field">
+          <label for="donAmount" data-i18n="modal.amount">Amount (UGX)</label>
+          <input type="number" id="donAmount" name="amount" min="1000" step="500" required placeholder="10000">
+          <div class="quick-chips">
+            <button type="button" data-amt="5000">5,000</button>
+            <button type="button" data-amt="10000">10,000</button>
+            <button type="button" data-amt="20000">20,000</button>
+            <button type="button" data-amt="50000">50,000</button>
+            <button type="button" data-amt="100000">100,000</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="donReason" data-i18n="modal.reason">Reason for donation</label>
+          <textarea id="donReason" name="reason" rows="2" required placeholder="School fees, food support, general giving…"></textarea>
+        </div>
+        <div class="field">
+          <label for="donPhone" data-i18n="modal.phone">Your phone number (sending from)</label>
+          <input type="tel" id="donPhone" name="phone" required placeholder="+256 7XX XXX XXX">
+        </div>
+        <button type="submit" class="btn-primary donate-submit">
+          <span data-i18n="modal.continue">Continue</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="donate-step" id="donateResultStep" hidden>
+      <div class="donate-head">
+        <div class="donate-logo success-logo"><i class="fa-solid fa-check"></i></div>
+        <div>
+          <h3 data-i18n="modal.almost">Almost there!</h3>
+          <p class="donate-sub" data-i18n="modal.almost.sub">Dial this code on your phone to complete your donation.</p>
+        </div>
+      </div>
+      <div class="ussd-box">
+        <div class="ussd-label" data-i18n="modal.ussd">USSD code</div>
+        <div class="ussd-code" id="ussdCode">*185*1*1*256759862493*10000#</div>
+        <div class="ussd-actions">
+          <button type="button" class="copy-btn" id="copyUssd">
+            <i class="fa-regular fa-copy"></i> <span data-i18n="modal.copy">Copy</span>
+          </button>
+          <a href="#" class="copy-btn dial-btn" id="dialBtn">
+            <i class="fa-solid fa-phone"></i> <span data-i18n="modal.dial">Open Dialer</span>
+          </a>
+        </div>
+      </div>
+      <div class="donate-summary" id="donateSummary"></div>
+      <button type="button" class="btn-ghost-full" id="backToDonate">
+        <i class="fa-solid fa-arrow-left"></i> <span data-i18n="modal.back">Make another donation</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

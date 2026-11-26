@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coach Uganda Journal | Health, Food & Lifestyle</title>
+<link rel="stylesheet" href="style.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="journal-page">
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar scrolled">
+  <div class="nav-container">
+    <a href="index.html" class="logo" aria-label="Coach Uganda home">
+      <span class="logo-badge">
+        <span class="logo-c">C</span><span class="logo-dot">·</span><span class="logo-u">U</span>
+      </span>
+      <small>Coach Uganda</small>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+      <li><a href="give.html" class="nav-link" data-i18n="nav.gives">Gives ❤️</a></li>
+      <li><a href="journal.html" class="nav-link active" data-i18n="nav.journal">Journal</a></li>
+    </ul>
+    
+    <!-- Language selector -->
+    <div class="lang-wrap">
+      <button type="button" class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+        <i class="fa-solid fa-globe"></i> <span id="langCurrent">EN</span>
+        <i class="fa-solid fa-chevron-down lang-caret"></i>
+      </button>
+      <ul class="lang-menu" id="langMenu" role="menu">
+        <li role="none"><button data-lang="en" role="menuitem">🇬🇧 English</button></li>
+        <li role="none"><button data-lang="fr" role="menuitem">🇫🇷 Français</button></li>
+        <li role="none"><button data-lang="de" role="menuitem">🇩🇪 Deutsch</button></li>
+        <li role="none"><button data-lang="es" role="menuitem">🇪🇸 Español</button></li>
+        <li role="none"><button data-lang="it" role="menuitem">🇮🇹 Italiano</button></li>
+        <li role="none"><button data-lang="ar" role="menuitem">🇸🇦 العربية</button></li>
+      </ul>
+    </div>
+    <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+  </div>
+</nav>
+
+<!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+<a href="https://wa.me/491771726078" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span class="whatsapp-pulse"></span>
+</a>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="journal-hero">
+  <div class="journal-hero-content">
+    <span class="journal-tag" data-i18n="journal.tag">The Journal</span>
+    <h1 data-i18n="journal.title">Stories, Tips & Inspiration</h1>
+    <p data-i18n="journal.sub">Exploring health, food, and lifestyle from around the world.</p>
+  </div>
+</section>
+
+<!-- ===== JOURNAL POSTS ===== -->
+<section class="journal-grid-section">
+  <div class="container">
+    <div class="journal-grid">
+
+      <!-- CARD 1: Health & Wellness -->
+      <article class="journal-card">
+        <div class="journal-card-img" style="background-image: url('images/health.avif');">
+          <div class="journal-card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        </div>
+        <div class="journal-card-body">
+          <span class="journal-category" data-i18n="journal.cat.health">Health & Wellness</span>
+          <h2 data-i18n="journal.health.title">The Power of Everyday Movement</h2>
+          <p data-i18n="journal.health.desc">Discover how small, daily habits can transform your physical and mental well-being. It's not always about the gym—it's about how you live.</p>
+          <a href="health.html" class="btn-journal-explore">
+            <span data-i18n="journal.explore">Explore More</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 2: Home Remedies -->
+      <article class="journal-card">
+        <div class="journal-card-img" style="background-image: url('images/home.webp');">
+          <div class="journal-card-icon"><i class="fa-solid fa-leaf"></i></div>
+        </div>
+        <div class="journal-card-body">
+          <span class="journal-category" data-i18n="journal.cat.remedies">Home Remedies</span>
+          <h2 data-i18n="journal.remedies.title">Nature's Natural Pharmacy</h2>
+          <p data-i18n="journal.remedies.desc">From ginger teas to herbal compresses, explore traditional and natural remedies that have been used for generations to soothe everyday ailments.</p>
+          <a href="home remedies.html" class="btn-journal-explore">
+            <span data-i18n="journal.explore">Explore More</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 3: Food Around the World -->
+      <article class="journal-card">
+        <div class="journal-card-img" style="background-image: url('images/food w.jfif');">
+          <div class="journal-card-icon"><i class="fa-solid fa-utensils"></i></div>
+        </div>
+        <div class="journal-card-body">
+          <span class="journal-category" data-i18n="journal.cat.food">Food Around the World</span>
+          <h2 data-i18n="journal.food.title">A Taste of Global Culture</h2>
+          <p data-i18n="journal.food.desc">Food is the universal language. Join me as we explore delicious dishes, traditional recipes, and the stories behind the meals that bring people together.</p>
+          <a href="food.html" class="btn-journal-explore">
+            <span data-i18n="journal.explore">Explore More</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 4: Lifestyle & Experience -->
+      <article class="journal-card">
+        <div class="journal-card-img" style="background-image: url('images/life3.png');">
+          <div class="journal-card-icon"><i class="fa-solid fa-globe"></i></div>
+        </div>
+        <div class="journal-card-body">
+          <span class="journal-category" data-i18n="journal.cat.lifestyle">Lifestyle & Experience</span>
+          <h2 data-i18n="journal.lifestyle.title">Living Life with Purpose</h2>
+          <p data-i18n="journal.lifestyle.desc">Reflections on travel, personal growth, and embracing new experiences. Life is a journey, and every day is a chance to learn something new.</p>
+          <a href="life.html" class="btn-journal-explore">
+            <span data-i18n="journal.explore">Explore More</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAY CONNECTED ===== -->
+<section class="gives-stay">
+  <div class="container">
+    <h2 class="gives-title" data-i18n="stay.title">Stay Connected with Coach Uganda</h2>
+    <p class="gives-text" style="margin-bottom: 30px;" data-i18n="stay.sub">
+      Don't miss the next update. Subscribe with your personal email to receive our newsletter directly in your inbox.
+    </p>
+    <form class="stay-form" id="stayForm" novalidate>
+      <input type="email" id="stayEmail" name="email" placeholder="Your personal email address" required aria-label="Your email address" data-i18n="stay.placeholder">
+      <button type="submit" id="stayBtn">
+        <span class="btn-label" data-i18n="stay.btn">Subscribe</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+      <p class="form-message" id="stayMessage" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER (MINI) ===== -->
+<footer class="journal-footer">
+  <div class="container">
+    <p>&copy; 2026 Coach Uganda. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
